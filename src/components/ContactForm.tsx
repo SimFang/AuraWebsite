@@ -1,17 +1,10 @@
 
-import React, { useState, useRef } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Download, Send, FileText } from "lucide-react";
+import { Download, Send, FileText } from "lucide-react";
 import { toast } from "@/components/ui/sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Form, FormField, FormItem, FormLabel, FormControl } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-import emailjs from '@emailjs/browser';
-import { sendEmail } from '../lib/emailjs';
 import { uploadFileForSharing } from '../lib/fileUpload';
 
 // Sample form document URL - replace with your actual document
