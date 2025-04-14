@@ -5,6 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  build: {
+    rollupOptions: {
+      external: ['@emailjs/browser'],
+    },
+  },
   server: {
     host: "::",
     port: 8080,
