@@ -18,7 +18,7 @@ export const en = {
     basicWebsite: {
       title: "Basic Website",
       price: "€299",
-      description: "Perfect for small businesses just getting started online.",
+      description: "Perfect for businesses which want an excellent online presence.",
       features: [
         "Custom homepage + up to 3 other pages",
         "Mobile & tablet responsive design",
@@ -153,7 +153,7 @@ export const en = {
     emailUs: "Email Us:"
   },
   footer: {
-    description: "Professional websites for €299. Fast, affordable, and high-quality web design for small businesses.",
+    description: "Professional websites for €299. Fast, affordable, and high-quality web design for businesses.",
     services: "Services",
     servicesLinks: {
       basicWebsite: "Basic Website",

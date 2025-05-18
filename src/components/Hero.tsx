@@ -81,12 +81,13 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover" 
+      className="overflow-hidden relative bg-cover min-h-[30vh]" 
       id="hero" 
       style={{
         backgroundImage: 'url("/Header-background.webp")',
         backgroundPosition: 'center 30%', 
-        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
+        backgroundSize: '100% auto',
+        padding: isMobile ? '80px 12px 40px' : '100px 20px 60px'
       }}
     >
       {/* Updated to blue gradient */}
@@ -147,7 +148,7 @@ const Hero = () => {
               <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
                 <img 
                   ref={imageRef} 
-                  src="/lovable-uploads/4521cbc6-e2bf-48a3-b9aa-e0cba7be060e.png" 
+                  src="/lovable-uploads/4521cbc6-e2bf-48a3-b9aa-e0cba7be060e.webp" 
                   alt="Web Design - Responsive Website" 
                   className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
                   style={{ transformStyle: 'preserve-3d' }} 

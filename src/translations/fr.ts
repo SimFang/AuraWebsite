@@ -7,7 +7,7 @@ export const fr = {
     getStarted: "Commencer"
   },
   hero: {
-    title: "Des Sites Web Magnifiques pour Seulement €299",
+    title: "Des Sites Web personnalisés pour Seulement €299",
     description: "Tout ce dont vous avez besoin pour mettre votre entreprise en ligne rapidement, sans sacrifier la qualité ni votre budget.",
     getStarted: "Commencez Maintenant"
   },
@@ -18,7 +18,7 @@ export const fr = {
     basicWebsite: {
       title: "Site Web Basique",
       price: "€299",
-      description: "Parfait pour les petites entreprises qui débutent en ligne.",
+      description: "Parfait pour les entreprises voulant une présence en ligne.",
       features: [
         "Page d'accueil personnalisée + jusqu'à 3 autres pages",
         "Design responsive pour mobile et tablette",
@@ -153,7 +153,7 @@ export const fr = {
     emailUs: "Envoyez-nous un email :"
   },
   footer: {
-    description: "Sites web professionnels pour €299. Conception web rapide, abordable et de haute qualité pour les petites entreprises.",
+    description: "Sites web professionnels pour €299. Conception web rapide, abordable et de haute qualité pour les entreprises.",
     services: "Services",
     servicesLinks: {
       basicWebsite: "Site Web Basique",
