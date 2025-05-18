@@ -54,11 +54,6 @@ const Navbar = () => {
           }}
           aria-label="Aura Solutions"
         >
-          <img 
-            src="/logo.svg" 
-            alt="Aura Solutions Logo" 
-            className="h-7 sm:h-8" 
-          />
           <span className="text-lg font-medium text-aura-900">Aura Solutions</span>
         </a>
 

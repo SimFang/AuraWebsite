@@ -6,9 +6,8 @@ const Footer = () => {
     <footer className="w-full bg-gray-100 py-8 border-t border-gray-200">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
+          {/* Description */}
           <div className="col-span-1 md:col-span-2">
-            <img src="/logo.svg" alt="Aura Solutions Logo" className="h-8 w-auto mb-4" />
             <p className="text-gray-600 text-sm">
               Professional websites for €299. Fast, affordable, and high-quality web design for small businesses.
             </p>
