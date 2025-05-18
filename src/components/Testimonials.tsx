@@ -1,80 +1,97 @@
 
-import React, { useRef } from "react";
+import React from "react";
 
 interface TestimonialProps {
   content: string;
   author: string;
   role: string;
-  gradient: string;
-  backgroundImage?: string;
+  backgroundImage: string;
 }
 
-const testimonials: TestimonialProps[] = [{
-  content: "Atlas transformed our production line, handling repetitive tasks while our team focuses on innovation. 30% increase in output within three months.",
-  author: "Sarah Chen",
-  role: "VP of Operations, Axion Manufacturing",
-  gradient: "from-blue-700 via-indigo-800 to-purple-900",
-  backgroundImage: "/background-section1.png"
-}, {
-  content: "Implementing Atlas in our fulfillment centers reduced workplace injuries by 40% while improving order accuracy. The learning capabilities are remarkable.",
-  author: "Michael Rodriguez",
-  role: "Director of Logistics, GlobalShip",
-  gradient: "from-indigo-900 via-purple-800 to-orange-500",
-  backgroundImage: "/background-section2.png"
-}, {
-  content: "Atlas adapted to our lab protocols faster than any system we've used. It's like having another researcher who never gets tired and maintains perfect precision.",
-  author: "Dr. Amara Patel",
-  role: "Lead Scientist, BioAdvance Research",
-  gradient: "from-purple-800 via-pink-700 to-red-500",
-  backgroundImage: "/background-section3.png"
-}, {
-  content: "As a mid-size business, we never thought advanced robotics would be accessible to us. Atlas changed that equation entirely with its versatility and ease of deployment.",
-  author: "Jason Lee",
-  role: "CEO, Innovative Solutions Inc.",
-  gradient: "from-orange-600 via-red-500 to-purple-600",
-  backgroundImage: "/background-section1.png"
-}];
+const testimonials: TestimonialProps[] = [
+  {
+    content: "Aura Solutions delivered exactly what we needed - a professional website at an affordable price. The process was quick and simple!",
+    author: "Sarah Chen",
+    role: "Boutique Owner",
+    backgroundImage: "/background-section1.png"
+  }, 
+  {
+    content: "I was amazed at how smooth the process was. In just a week, I had a beautiful website that perfectly represented my business.",
+    author: "Michael Rodriguez",
+    role: "Independent Consultant",
+    backgroundImage: "/background-section2.png"
+  }, 
+  {
+    content: "As a startup founder, I needed a website quickly without breaking the bank. Aura Solutions delivered beyond my expectations.",
+    author: "Dr. Amara Patel",
+    role: "Health Tech Startup",
+    backgroundImage: "/background-section3.png"
+  }, 
+  {
+    content: "The website they built for my small business looks like I paid thousands for it. Great value and professional service.",
+    author: "Jason Lee",
+    role: "Restaurant Owner",
+    backgroundImage: "/background-section1.png"
+  }
+];
 
 const TestimonialCard = ({
   content,
   author,
   role,
-  backgroundImage = "/background-section1.png"
+  backgroundImage
 }: TestimonialProps) => {
-  return <div className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden" style={{
-    backgroundImage: `url('${backgroundImage}')`
-  }}>
-      <div className="absolute top-0 right-0 w-24 h-24 bg-white z-10"></div>
-      
-      <div className="relative z-0">
-        <p className="text-xl mb-8 font-medium leading-relaxed pr-20">{`"${content}"`}</p>
+  return (
+    <div 
+      className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden" 
+      style={{ backgroundImage: `url('${backgroundImage}')` }}
+    >
+      <div className="relative z-10">
+        <p className="text-xl mb-8 font-medium leading-relaxed">{`"${content}"`}</p>
         <div>
           <h4 className="font-semibold text-xl">{author}</h4>
           <p className="text-white/80">{role}</p>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 const Testimonials = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  return <section className="py-12 bg-white relative" id="testimonials" ref={sectionRef}> {/* Reduced from py-20 */}
-      <div className="section-container opacity-0 animate-on-scroll">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="pulse-chip">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
-            <span>Testimonials</span>
+  return (
+    <section className="py-16 bg-white" id="testimonials">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto opacity-0 animate-on-scroll">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="aura-chip">
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-aura-500 text-white mr-2">5</span>
+            <span>What Our Clients Say</span>
           </div>
+          <div className="flex-1 h-[1px] bg-gray-300"></div>
         </div>
         
-        <h2 className="text-5xl font-display font-bold mb-12 text-left">What others say</h2>
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-lg text-gray-600">
+            Here's what businesses like yours have to say about their experience working with Aura Solutions.
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => <TestimonialCard key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} gradient={testimonial.gradient} backgroundImage={testimonial.backgroundImage} />)}
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard 
+              key={index} 
+              content={testimonial.content} 
+              author={testimonial.author} 
+              role={testimonial.role} 
+              backgroundImage={testimonial.backgroundImage} 
+            />
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Testimonials;

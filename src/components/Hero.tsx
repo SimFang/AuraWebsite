@@ -96,7 +96,8 @@ const Hero = () => {
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-aura-gradient opacity-20 blur-3xl rounded-full"></div>
+      {/* Updated to blue gradient */}
+      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-gradient-to-br from-aura-400 to-aura-700 opacity-20 blur-3xl rounded-full"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
@@ -138,7 +139,7 @@ const Hero = () => {
                   cursor: 'pointer',
                   fontSize: '14px',
                   lineHeight: '20px',
-                  padding: '16px 24px', // Slightly reduced padding for mobile
+                  padding: '16px 24px',
                   border: '1px solid white',
                 }}
               >
@@ -169,7 +170,7 @@ const Hero = () => {
                   className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
                   style={{ transformStyle: 'preserve-3d' }} 
                 />
-                <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
+                <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
               </div>
               </>
             )}

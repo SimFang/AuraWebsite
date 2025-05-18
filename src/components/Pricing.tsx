@@ -67,7 +67,7 @@ const Pricing = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
           <PricingCard
             title="Basic Website"
             price="€299"
@@ -81,21 +81,6 @@ const Pricing = () => {
               "Hosting setup assistance",
               "Delivered within 7 days"
             ]}
-          />
-          
-          <PricingCard
-            title="E-commerce"
-            price="€498"
-            description="Everything in Basic plus online shop functionality."
-            features={[
-              "All Basic Website features",
-              "E-commerce functionality",
-              "Product catalog (up to 20 products)",
-              "Secure payment processing",
-              "Shopping cart & checkout",
-              "Order management",
-              "Basic inventory tracking"
-            ]}
             isPrimary={true}
           />
           
@@ -104,7 +89,7 @@ const Pricing = () => {
             price="Custom"
             description="For businesses with specific needs and requirements."
             features={[
-              "All E-commerce features",
+              "All Basic Website features",
               "Additional pages as needed",
               "Custom functionality",
               "Premium copywriting",
@@ -118,15 +103,6 @@ const Pricing = () => {
         <div className="mt-12 max-w-3xl mx-auto bg-white p-6 rounded-xl border border-gray-200">
           <h3 className="text-xl font-bold mb-4 text-center">Optional Upgrades</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex items-center p-3 border border-gray-100 rounded-lg">
-              <div className="mr-3 p-2 bg-aura-100 rounded-full">
-                <Check className="w-4 h-4 text-aura-500" />
-              </div>
-              <div>
-                <p className="font-medium">E-commerce setup</p>
-                <p className="text-sm text-gray-500">+€199</p>
-              </div>
-            </div>
             <div className="flex items-center p-3 border border-gray-100 rounded-lg">
               <div className="mr-3 p-2 bg-aura-100 rounded-full">
                 <Check className="w-4 h-4 text-aura-500" />

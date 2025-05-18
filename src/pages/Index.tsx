@@ -6,9 +6,9 @@ import Pricing from "@/components/Pricing";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContactForm from "@/components/ContactForm";
 import SpecsSection from "@/components/SpecsSection";
-import ImageShowcaseSection from "@/components/ImageShowcaseSection";
+import Testimonials from "@/components/Testimonials";
 import Features from "@/components/Features";
-import MadeByHumans from "@/components/MadeByHumans";
+import WhoItsFor from "@/components/WhoItsFor";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -60,15 +60,15 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
+      <main className="space-y-4 sm:space-y-8">
         <Hero />
+        <Features />
         <Pricing />
         <ProcessSteps />
         <SpecsSection />
-        <ImageShowcaseSection />
-        <Features />
+        <WhoItsFor />
+        <Testimonials />
         <ContactForm />
-        <MadeByHumans />
       </main>
       <Footer />
     </div>
