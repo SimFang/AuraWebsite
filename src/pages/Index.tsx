@@ -7,7 +7,6 @@ import ProcessSteps from "@/components/ProcessSteps";
 import ContactForm from "@/components/ContactForm";
 import SpecsSection from "@/components/SpecsSection";
 import Testimonials from "@/components/Testimonials";
-import Features from "@/components/Features";
 import WhoItsFor from "@/components/WhoItsFor";
 import Footer from "@/components/Footer";
 
@@ -62,7 +61,6 @@ const Index = () => {
       <Navbar />
       <main className="space-y-4 sm:space-y-8">
         <Hero />
-        <Features />
         <Pricing />
         <ProcessSteps />
         <SpecsSection />
