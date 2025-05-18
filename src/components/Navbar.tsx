@@ -2,10 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLocale();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +61,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           <a 
             href="#" 
             className="nav-link"
@@ -67,21 +70,25 @@ const Navbar = () => {
               scrollToTop();
             }}
           >
-            Home
+            {t("navbar.home")}
           </a>
-          <a href="#pricing" className="nav-link">Pricing</a>
-          <a href="#how-it-works" className="nav-link">How It Works</a>
-          <a href="#get-started" className="nav-link">Get Started</a>
+          <a href="#pricing" className="nav-link">{t("navbar.pricing")}</a>
+          <a href="#how-it-works" className="nav-link">{t("navbar.howItWorks")}</a>
+          <a href="#get-started" className="nav-link">{t("navbar.getStarted")}</a>
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile menu button - increased touch target */}
-        <button 
-          className="md:hidden text-gray-700 p-3 focus:outline-none" 
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button 
+            className="text-gray-700 p-3 focus:outline-none" 
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation - improved for better touch experience */}
@@ -100,7 +107,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Home
+            {t("navbar.home")}
           </a>
           <a 
             href="#pricing" 
@@ -110,7 +117,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Pricing
+            {t("navbar.pricing")}
           </a>
           <a 
             href="#how-it-works" 
@@ -120,7 +127,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            How It Works
+            {t("navbar.howItWorks")}
           </a>
           <a 
             href="#get-started" 
@@ -130,7 +137,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Get Started
+            {t("navbar.getStarted")}
           </a>
         </nav>
       </div>

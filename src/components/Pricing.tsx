@@ -1,19 +1,22 @@
 
 import React from "react";
 import { Check } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const PricingCard = ({ 
   title, 
   price, 
   description, 
   features, 
-  isPrimary = false 
+  isPrimary = false,
+  getStartedText
 }: { 
   title: string; 
   price: string; 
   description: string; 
   features: string[]; 
   isPrimary?: boolean;
+  getStartedText: string;
 }) => {
   return (
     <div className={`rounded-2xl p-6 sm:p-8 ${isPrimary ? 'bg-aura-50 border-2 border-aura-500 shadow-lg relative' : 'bg-white border border-gray-200'}`}>
@@ -47,69 +50,57 @@ const PricingCard = ({
             : 'border border-aura-500 text-aura-500 hover:bg-aura-50'
         }`}
       >
-        Get Started
+        {getStartedText}
       </a>
     </div>
   );
 };
 
 const Pricing = () => {
+  const { t } = useLocale();
+  
   return (
     <section id="pricing" className="py-16 bg-gray-50">
       <div className="section-container">
         <div className="text-center mb-16">
           <div className="aura-chip mx-auto mb-4">
-            <span>Transparent Pricing</span>
+            <span>{t("pricing.transparentPricing")}</span>
           </div>
-          <h2 className="section-title mb-4">Simple, Affordable Website Packages</h2>
+          <h2 className="section-title mb-4">{t("pricing.title")}</h2>
           <p className="section-subtitle mx-auto">
-            Everything you need to get your business online quickly, without sacrificing quality or breaking the bank.
+            {t("pricing.subtitle")}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
           <PricingCard
-            title="Basic Website"
-            price="€299"
-            description="Perfect for small businesses just getting started online."
-            features={[
-              "Custom homepage + up to 3 other pages",
-              "Mobile & tablet responsive design",
-              "Fast loading speed optimization",
-              "Basic SEO setup",
-              "Simple content integration",
-              "Hosting setup assistance",
-              "Delivered within 7 days"
-            ]}
+            title={t("pricing.basicWebsite.title")}
+            price={t("pricing.basicWebsite.price")}
+            description={t("pricing.basicWebsite.description")}
+            features={t("pricing.basicWebsite.features").map(feature => feature)}
             isPrimary={true}
+            getStartedText={t("pricing.getStarted")}
           />
           
           <PricingCard
-            title="Custom Project"
-            price="Custom"
-            description="For businesses with specific needs and requirements."
-            features={[
-              "All Basic Website features",
-              "Additional pages as needed",
-              "Custom functionality",
-              "Premium copywriting",
-              "Logo & branding design",
-              "Advanced SEO setup",
-              "Priority support"
-            ]}
+            title={t("pricing.customProject.title")}
+            price={t("pricing.customProject.price")}
+            description={t("pricing.customProject.description")}
+            features={t("pricing.customProject.features").map(feature => feature)}
+            getStartedText={t("pricing.getStarted")}
           />
         </div>
         
         <div className="mt-12 max-w-3xl mx-auto bg-white p-6 rounded-xl border border-gray-200">
-          <h3 className="text-xl font-bold mb-4 text-center">Optional Upgrades</h3>
+          <h3 className="text-xl font-bold mb-4 text-center">{t("pricing.optionalUpgrades.title")}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-center p-3 border border-gray-100 rounded-lg">
               <div className="mr-3 p-2 bg-aura-100 rounded-full">
                 <Check className="w-4 h-4 text-aura-500" />
               </div>
               <div>
-                <p className="font-medium">Additional pages</p>
-                <p className="text-sm text-gray-500">+€49/page</p>
+                <p className="font-medium">{t("pricing.optionalUpgrades.additionalPages")}</p>
+                <p className="text-sm text-gray-500">{t("pricing.optionalUpgrades.additionalPagesPrice")}</p>
               </div>
             </div>
             <div className="flex items-center p-3 border border-gray-100 rounded-lg">
@@ -117,8 +108,8 @@ const Pricing = () => {
                 <Check className="w-4 h-4 text-aura-500" />
               </div>
               <div>
-                <p className="font-medium">Copywriting services</p>
-                <p className="text-sm text-gray-500">+€149</p>
+                <p className="font-medium">{t("pricing.optionalUpgrades.copywriting")}</p>
+                <p className="text-sm text-gray-500">{t("pricing.optionalUpgrades.copywritingPrice")}</p>
               </div>
             </div>
             <div className="flex items-center p-3 border border-gray-100 rounded-lg">
@@ -126,8 +117,8 @@ const Pricing = () => {
                 <Check className="w-4 h-4 text-aura-500" />
               </div>
               <div>
-                <p className="font-medium">Logo & branding help</p>
-                <p className="text-sm text-gray-500">+€99</p>
+                <p className="font-medium">{t("pricing.optionalUpgrades.logo")}</p>
+                <p className="text-sm text-gray-500">{t("pricing.optionalUpgrades.logoPrice")}</p>
               </div>
             </div>
           </div>

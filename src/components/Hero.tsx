@@ -2,11 +2,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useLocale();
 
   useEffect(() => {
     // Check if mobile on mount and when window resizes
@@ -105,14 +107,14 @@ const Hero = () => {
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              Beautiful Websites<br className="hidden sm:inline" />for Just €299
+              {t("hero.title")}
             </h1>
             
             <p 
               style={{ animationDelay: "0.5s" }} 
               className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
             >
-              Everything you need to get your business online quickly, without sacrificing quality or breaking the bank.
+              {t("hero.description")}
             </p>
             
             <div 
@@ -134,7 +136,7 @@ const Hero = () => {
                   border: '1px solid white',
                 }}
               >
-                Get Started Now
+                {t("hero.getStarted")}
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

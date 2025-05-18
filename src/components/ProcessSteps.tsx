@@ -1,6 +1,7 @@
 
 import React from "react";
 import { File, Code, Globe } from "lucide-react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 interface StepProps {
   number: string;
@@ -34,45 +35,57 @@ const Step = ({ number, title, description, icon }: StepProps) => {
 };
 
 const ProcessSteps = () => {
+  const { t } = useLocale();
+  
+  const steps = [
+    {
+      number: "1",
+      title: t("howItWorks.steps.0.title"),
+      description: t("howItWorks.steps.0.description"),
+      icon: <File size={24} />
+    },
+    {
+      number: "2",
+      title: t("howItWorks.steps.1.title"),
+      description: t("howItWorks.steps.1.description"),
+      icon: <Code size={24} />
+    },
+    {
+      number: "3",
+      title: t("howItWorks.steps.2.title"),
+      description: t("howItWorks.steps.2.description"),
+      icon: <Globe size={24} />
+    }
+  ];
+  
   return (
     <section id="how-it-works" className="py-16 bg-white">
       <div className="section-container">
         <div className="text-center mb-16">
           <div className="aura-chip mx-auto mb-4">
-            <span>Simple Process</span>
+            <span>{t("howItWorks.simpleProcess")}</span>
           </div>
-          <h2 className="section-title mb-4">How It Works — Simple & Streamlined</h2>
+          <h2 className="section-title mb-4">{t("howItWorks.title")}</h2>
           <p className="section-subtitle mx-auto">
-            No calls, no meetings, no friction. Just an easy process to get your website up and running fast.
+            {t("howItWorks.subtitle")}
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-12">
-          <Step 
-            number="1" 
-            title="Fill Out Form" 
-            description="Provide your business info, upload images, text, and any branding materials. The more details you provide, the better your site will be."
-            icon={<File size={24} />}
-          />
-          
-          <Step 
-            number="2" 
-            title="We Build Your Site" 
-            description="Our team gets to work and builds your custom website within 7 days. No calls or meetings - we work efficiently with what you provide."
-            icon={<Code size={24} />}
-          />
-          
-          <Step 
-            number="3" 
-            title="Site Goes Live" 
-            description="Receive your live, ready-to-use website! It's yours forever. Simple handover with all access details and basic usage instructions."
-            icon={<Globe size={24} />}
-          />
+          {steps.map((step) => (
+            <Step 
+              key={step.number}
+              number={step.number} 
+              title={step.title} 
+              description={step.description}
+              icon={step.icon}
+            />
+          ))}
         </div>
         
         <div className="mt-16 text-center">
           <a href="#get-started" className="button-primary inline-flex items-center">
-            Get Started Now
+            {t("howItWorks.getStarted")}
           </a>
         </div>
       </div>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import { useLocale } from "@/contexts/LocaleContext";
 
 interface TestimonialProps {
   content: string;
@@ -7,33 +8,6 @@ interface TestimonialProps {
   role: string;
   backgroundImage: string;
 }
-
-const testimonials: TestimonialProps[] = [
-  {
-    content: "Aura Solutions delivered exactly what we needed - a professional website at an affordable price. The process was quick and simple!",
-    author: "Sarah Chen",
-    role: "Boutique Owner",
-    backgroundImage: "/background-section1.png"
-  }, 
-  {
-    content: "I was amazed at how smooth the process was. In just a week, I had a beautiful website that perfectly represented my business.",
-    author: "Michael Rodriguez",
-    role: "Independent Consultant",
-    backgroundImage: "/background-section2.png"
-  }, 
-  {
-    content: "As a startup founder, I needed a website quickly without breaking the bank. Aura Solutions delivered beyond my expectations.",
-    author: "Dr. Amara Patel",
-    role: "Health Tech Startup",
-    backgroundImage: "/background-section3.png"
-  }, 
-  {
-    content: "The website they built for my small business looks like I paid thousands for it. Great value and professional service.",
-    author: "Jason Lee",
-    role: "Restaurant Owner",
-    backgroundImage: "/background-section1.png"
-  }
-];
 
 const TestimonialCard = ({
   content,
@@ -58,23 +32,34 @@ const TestimonialCard = ({
 };
 
 const Testimonials = () => {
+  const { t } = useLocale();
+  
+  const testimonials = t("testimonials.clients").map((client, index) => {
+    return {
+      content: client.content,
+      author: client.author,
+      role: client.role,
+      backgroundImage: `/background-section${(index % 3) + 1}.png`
+    };
+  });
+  
   return (
     <section className="py-16 bg-white" id="testimonials">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto opacity-0 animate-on-scroll">
         <div className="flex items-center gap-4 mb-8">
           <div className="aura-chip">
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-aura-500 text-white mr-2">5</span>
-            <span>What Our Clients Say</span>
+            <span>{t("testimonials.whatOurClientsSay")}</span>
           </div>
           <div className="flex-1 h-[1px] bg-gray-300"></div>
         </div>
         
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-4">
-            What Our Clients Say
+            {t("testimonials.title")}
           </h2>
           <p className="text-lg text-gray-600">
-            Here's what businesses like yours have to say about their experience working with Aura Solutions.
+            {t("testimonials.subtitle")}
           </p>
         </div>
         
