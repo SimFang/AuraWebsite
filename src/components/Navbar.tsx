@@ -52,13 +52,14 @@ const Navbar = () => {
             e.preventDefault();
             scrollToTop();
           }}
-          aria-label="Pulse Robot"
+          aria-label="Aura Solutions"
         >
           <img 
             src="/logo.svg" 
-            alt="Pulse Robot Logo" 
+            alt="Aura Solutions Logo" 
             className="h-7 sm:h-8" 
           />
+          <span className="text-lg font-medium text-aura-900">Aura Solutions</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -73,8 +74,9 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          <a href="#pricing" className="nav-link">Pricing</a>
+          <a href="#how-it-works" className="nav-link">How It Works</a>
+          <a href="#get-started" className="nav-link">Get Started</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -106,24 +108,34 @@ const Navbar = () => {
             Home
           </a>
           <a 
-            href="#features" 
+            href="#pricing" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
             }}
           >
-            About
+            Pricing
           </a>
           <a 
-            href="#details" 
+            href="#how-it-works" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
             }}
           >
-            Contact
+            How It Works
+          </a>
+          <a 
+            href="#get-started" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Get Started
           </a>
         </nav>
       </div>
