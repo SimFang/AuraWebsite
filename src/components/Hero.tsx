@@ -81,7 +81,7 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover min-h-[30vh]" 
+      className="overflow-hidden relative bg-cover min-h-[75vh]" 
       id="hero" 
       style={{
         backgroundImage: 'url("/Header-background.webp")',
@@ -145,15 +145,14 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
             <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl">
                 <img 
                   ref={imageRef} 
-                  src="/lovable-uploads/4521cbc6-e2bf-48a3-b9aa-e0cba7be060e.webp" 
+                  src="/computer.png" 
                   alt="Web Design - Responsive Website" 
                   className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
-                  style={{ transformStyle: 'preserve-3d' }} 
+                  style={{ transformStyle: 'preserve-3d'}} 
                 />
-                <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(90deg, hsla(221, 45%, 73%, 0.3) 0%, hsla(220, 78%, 29%, 0.3) 100%)', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
               </div>
             </div>
           </div>
