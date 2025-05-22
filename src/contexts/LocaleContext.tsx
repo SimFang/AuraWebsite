@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 // Define available languages
-export type Locale = "en" | "fr";
+export type Locale = "fr" | "en";
 
 // Type for the context
 type LocaleContextType = {
@@ -21,7 +21,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   // Get saved preference or default to English
   const [locale, setLocaleState] = useState<Locale>(() => {
     const savedLocale = localStorage.getItem("locale") as Locale;
-    return savedLocale || "en";
+    return savedLocale || "fr";
   });
 
   // Save locale preference when it changes

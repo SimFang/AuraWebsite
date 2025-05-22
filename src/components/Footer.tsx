@@ -31,7 +31,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-gray-800 mb-3">{t("footer.contact")}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 text-sm">{t("footer.email")} <a href="mailto:aurasolutionagency@outlook.com" className="text-aura-500 hover:underline">aurasolutionagency@outlook.com</a></li>
+              <li className="text-gray-600 text-sm">{t("footer.email")} <a href="mailto:contact.websora@gmail.com" className="text-aura-500 hover:underline">contact.websora@gmail.com</a></li>
             </ul>
             <div className="mt-4">
               <LanguageSwitcher />

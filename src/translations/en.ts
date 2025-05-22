@@ -167,7 +167,7 @@ export const en = {
   toasts: {
     download: {
       title: "Download Started",
-      description: "Please fill out the form and email it to aurasolutionagency@outlook.com"
+      description: "Please fill out the form and email it to contact.websora@gmail.com"
     }
   },
   language: {

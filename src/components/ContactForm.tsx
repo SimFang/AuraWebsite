@@ -11,7 +11,7 @@ const ContactForm = () => {
 
   const handleDownload = () => {
     // Direct link to the Dropbox file with download parameter
-    window.open("https://www.dropbox.com/scl/fi/5wxa2uos5i63tybo7old9/AuraSolution_IntakeForm_2025.docx?rlkey=dw8kqm2cwstyh28d2go4ypv0t&e=1&st=biu1sc7t&dl=1", "_blank");
+    window.open("https://www.dropbox.com/scl/fi/zqvmx2s53lfw97lmoag83/Websora_IntakeForm.docx?rlkey=gihcuthdr5nrycbonta3xso3h&st=0k34yjd3&dl=1", "_blank");
     
     toast({
       title: t("toasts.download.title"),
@@ -44,7 +44,7 @@ const ContactForm = () => {
                   <span className="font-medium">{t("contactForm.keywords.fillOut")}</span> {t("contactForm.steps.1")}
                 </li>
                 <li>
-                  <span className="font-medium">{t("contactForm.keywords.email")}</span> {t("contactForm.steps.2")} <a href="mailto:aurasolutionagency@outlook.com" className="text-aura-500 hover:underline">aurasolutionagency@outlook.com</a>
+                  <span className="font-medium">{t("contactForm.keywords.email")}</span> {t("contactForm.steps.2")} <a href="mailto:contact.websora@gmail.com" className="text-aura-500 hover:underline">contact.websora@gmail.com</a>
                 </li>
               </ol>
             </div>
@@ -65,8 +65,8 @@ const ContactForm = () => {
               
               <div className="inline-flex items-center gap-2 text-aura-500">
                 <Mail size={18} />
-                <a href="mailto:aurasolutionagency@outlook.com" className="hover:underline">
-                  aurasolutionagency@outlook.com
+                <a href="mailto:contact.websora@gmail.com" className="hover:underline">
+                  contact.websora@gmail.com
                 </a>
               </div>
             </div>
@@ -79,11 +79,11 @@ const ContactForm = () => {
             {t("contactForm.questionsMessage")}
           </p>
           <a 
-            href="mailto:aurasolutionagency@outlook.com" 
+            href="mailto:contact.websora@gmail.com" 
             className="button-secondary inline-flex items-center gap-2"
           >
             <Mail size={18} />
-            {t("contactForm.emailUs")} aurasolutionagency@outlook.com
+            {t("contactForm.emailUs")} contact.websora@gmail.com
           </a>
         </div>
       </div>
