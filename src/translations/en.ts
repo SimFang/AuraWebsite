@@ -7,7 +7,7 @@ export const en = {
     getStarted: "Get Started"
   },
   hero: {
-    title: "Beautiful Websites for Just €299",
+    title: "Beautiful Websites for Just €499",
     description: "Everything you need to get your business online quickly, without sacrificing quality or breaking the bank.",
     getStarted: "Get Started Now"
   },
@@ -17,7 +17,7 @@ export const en = {
     transparentPricing: "Transparent Pricing",
     basicWebsite: {
       title: "Basic Website",
-      price: "€299",
+      price: "€499",
       description: "Perfect for businesses which want an excellent online presence.",
       features: [
         "Custom homepage + up to 3 other pages",
@@ -153,7 +153,7 @@ export const en = {
     emailUs: "Email Us:"
   },
   footer: {
-    description: "Professional websites for €299. Fast, affordable, and high-quality web design for businesses.",
+    description: "Professional websites for €499. Fast, affordable, and high-quality web design for businesses.",
     services: "Services",
     servicesLinks: {
       basicWebsite: "Basic Website",
