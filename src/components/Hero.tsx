@@ -86,10 +86,13 @@ const Hero = () => {
       style={{
         backgroundImage: 'url("/Header-background.webp")',
         backgroundPosition: 'center 30%', 
-        backgroundSize: '100% auto',
+        backgroundSize: isMobile ? '150% auto' : '100% auto',
         padding: isMobile ? '80px 12px 40px' : '100px 20px 60px'
       }}
     >
+      {/* Gradient overlay for smooth fade-out */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none"></div>
+      
       {/* Updated to blue gradient */}
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-gradient-to-br from-aura-400 to-aura-700 opacity-20 blur-3xl rounded-full"></div>
       
