@@ -77,6 +77,20 @@ export default {
 					"900": "#0f3d7d",
 					"950": "#0a2650",
 				},
+				// Pulse colors (alias for aura colors for backward compatibility)
+				pulse: {
+					"50": "#f0f7ff",
+					"100": "#e0effe",
+					"200": "#bae0fd",
+					"300": "#7cc5fb",
+					"400": "#36a5f6",
+					"500": "#1E88E5",
+					"600": "#0969da",
+					"700": "#0858c0",
+					"800": "#0c499d",
+					"900": "#0f3d7d",
+					"950": "#0a2650",
+				},
 				dark: {
 					"900": "#121212", // Almost black
 					"800": "#1e1e1e",

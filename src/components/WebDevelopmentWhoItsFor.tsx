@@ -2,11 +2,8 @@ import React from "react";
 import { Store, Building2, Heart, GraduationCap, Briefcase, Home, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useLocale } from '../contexts/LocaleContext';
-
 const WebDevelopmentWhoItsFor = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=web-development');
@@ -15,54 +12,54 @@ const WebDevelopmentWhoItsFor = () => {
   const industries = [
     {
       icon: Store,
-      title: t('webDevelopment.whoItsFor.industries.0.title'),
-      description: t('webDevelopment.whoItsFor.industries.0.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.0.useCases'),
+      title: "E-commerce & Retail",
+      description: "Boutiques en ligne, marketplaces et plateformes de vente",
+      useCases: ["Boutiques en ligne", "Marketplaces", "Catalogues produits", "Systèmes de paiement"],
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       textColor: "text-blue-700"
     },
     {
       icon: Heart,
-      title: t('webDevelopment.whoItsFor.industries.1.title'),
-      description: t('webDevelopment.whoItsFor.industries.1.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.1.useCases'),
+      title: "Services Professionnels",
+      description: "Cabinets, consultants et prestataires de services",
+      useCases: ["Sites vitrine", "Prise de rendez-vous", "Portfolios", "Témoignages clients"],
       color: "from-red-500 to-red-600",
       bgColor: "bg-red-50",
       textColor: "text-red-700"
     },
     {
       icon: Building2,
-      title: t('webDevelopment.whoItsFor.industries.2.title'),
-      description: t('webDevelopment.whoItsFor.industries.2.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.2.useCases'),
+      title: "Santé & Bien-être",
+      description: "Cliniques, praticiens et centres de soins",
+      useCases: ["Prise de rendez-vous", "Dossiers patients", "Téléconsultation", "Informations médicales"],
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       textColor: "text-green-700"
     },
     {
       icon: GraduationCap,
-      title: t('webDevelopment.whoItsFor.industries.3.title'),
-      description: t('webDevelopment.whoItsFor.industries.3.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.3.useCases'),
+      title: "Éducation & Formation",
+      description: "Écoles, centres de formation et plateformes d'apprentissage",
+      useCases: ["Cours en ligne", "Gestion étudiants", "Ressources pédagogiques", "Évaluations"],
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
       textColor: "text-purple-700"
     },
     {
       icon: Briefcase,
-      title: t('webDevelopment.whoItsFor.industries.4.title'),
-      description: t('webDevelopment.whoItsFor.industries.4.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.4.useCases'),
+      title: "Immobilier",
+      description: "Agences, promoteurs et gestionnaires immobiliers",
+      useCases: ["Annonces immobilières", "Visites virtuelles", "Gestion locataires", "Estimations"],
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
       textColor: "text-orange-700"
     },
     {
       icon: Home,
-      title: t('webDevelopment.whoItsFor.industries.5.title'),
-      description: t('webDevelopment.whoItsFor.industries.5.description'),
-      useCases: t('webDevelopment.whoItsFor.industries.5.useCases'),
+      title: "Restauration & Hôtellerie",
+      description: "Restaurants, hôtels et services de restauration",
+      useCases: ["Réservations en ligne", "Menus digitaux", "Commandes", "Avis clients"],
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
       textColor: "text-indigo-700"
@@ -71,23 +68,23 @@ const WebDevelopmentWhoItsFor = () => {
 
   const businessSizes = [
     {
-      title: t('webDevelopment.whoItsFor.businessSizes.0.title'),
-      description: t('webDevelopment.whoItsFor.businessSizes.0.description'),
-      features: t('webDevelopment.whoItsFor.businessSizes.0.features'),
+      title: "Startups & PME",
+      description: "Solutions agiles pour entreprises en croissance",
+      features: ["Développement rapide", "Coûts maîtrisés", "Évolutivité", "Support dédié"],
       icon: Users,
       gradient: "from-aura-500 to-purple-600"
     },
     {
-      title: t('webDevelopment.whoItsFor.businessSizes.1.title'),
-      description: t('webDevelopment.whoItsFor.businessSizes.1.description'),
-      features: t('webDevelopment.whoItsFor.businessSizes.1.features'),
+      title: "Entreprises Moyennes",
+      description: "Plateformes robustes pour entreprises établies",
+      features: ["Intégrations complexes", "Performance optimisée", "Sécurité renforcée", "Maintenance continue"],
       icon: Briefcase,
       gradient: "from-blue-500 to-cyan-600"
     },
     {
-      title: t('webDevelopment.whoItsFor.businessSizes.2.title'),
-      description: t('webDevelopment.whoItsFor.businessSizes.2.description'),
-      features: t('webDevelopment.whoItsFor.businessSizes.2.features'),
+      title: "Grandes Entreprises",
+      description: "Solutions enterprise sur mesure",
+      features: ["Architecture personnalisée", "Haute disponibilité", "Support 24/7", "Consulting stratégique"],
       icon: Building2,
       gradient: "from-green-500 to-teal-600"
     }
@@ -95,33 +92,33 @@ const WebDevelopmentWhoItsFor = () => {
 
   const painPoints = [
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.0.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.0.solution'),
+      problem: "Site web obsolète qui ne convertit pas",
+      solution: "Refonte complète avec design moderne et UX optimisée",
       icon: "🌐"
     },
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.1.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.1.solution'),
+      problem: "Absence de présence en ligne",
+      solution: "Création d'un site web professionnel de A à Z",
       icon: "⚡"
     },
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.2.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.2.solution'),
+      problem: "Site lent et mal référencé",
+      solution: "Optimisation performance et SEO pour plus de visibilité",
       icon: "🔍"
     },
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.3.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.3.solution'),
+      problem: "Processus manuels chronophages",
+      solution: "Automatisation et intégrations pour gagner du temps",
       icon: "📱"
     },
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.4.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.4.solution'),
+      problem: "Difficultés à gérer le contenu",
+      solution: "CMS intuitif et formation pour autonomie complète",
       icon: "✏️"
     },
     {
-      problem: t('webDevelopment.whoItsFor.painPoints.5.problem'),
-      solution: t('webDevelopment.whoItsFor.painPoints.5.solution'),
+      problem: "Coûts de maintenance élevés",
+      solution: "Solutions optimisées avec maintenance préventive",
       icon: "🔒"
     }
   ];
@@ -151,7 +148,7 @@ const WebDevelopmentWhoItsFor = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Users className="w-4 h-4 mr-2" />
-            {t('webDevelopment.whoItsFor.badge')}
+            Pour Qui ?
           </motion.div>
           <motion.h2 
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
@@ -161,7 +158,7 @@ const WebDevelopmentWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('webDevelopment.whoItsFor.title')}
+            Qui Peut Bénéficier
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -169,7 +166,7 @@ const WebDevelopmentWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('webDevelopment.whoItsFor.titleHighlight')}
+              de Nos Services
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -179,7 +176,7 @@ const WebDevelopmentWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('webDevelopment.whoItsFor.subtitle')}
+            Nos solutions de développement web s'adaptent à tous types d'entreprises, des startups aux grandes corporations.
           </motion.p>
         </motion.div>
 
@@ -206,7 +203,7 @@ const WebDevelopmentWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {t('webDevelopment.whoItsFor.painPointsTitle')}
+              Problèmes Courants Que Nous Résolvons
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-600"
@@ -215,7 +212,7 @@ const WebDevelopmentWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('webDevelopment.whoItsFor.painPointsSubtitle')}
+              Identifiez-vous dans l'une de ces situations ? Nous avons la solution.
             </motion.p>
           </motion.div>
           
@@ -528,7 +525,7 @@ const WebDevelopmentWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('webDevelopment.whoItsFor.cta.title')}
+              Votre Projet Nous Intéresse
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
@@ -537,7 +534,7 @@ const WebDevelopmentWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {t('webDevelopment.whoItsFor.cta.description')}
+              Quel que soit votre secteur ou votre taille, nous avons l'expertise pour réussir votre projet web.
             </motion.p>
             <motion.button
               onClick={handleContactClick}
@@ -549,7 +546,7 @@ const WebDevelopmentWhoItsFor = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('webDevelopment.whoItsFor.cta.button')}
+              Discuter de Mon Projet
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.button>
           </motion.div>

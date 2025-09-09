@@ -3,18 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Code, Palette, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
 
 const WebDevelopmentHero = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=web-development');
   };
 
+  const handlePortfolioClick = () => {
+    navigate('/portfolio');
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-20">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-16">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-aura-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
@@ -29,25 +31,25 @@ const WebDevelopmentHero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-aura-100 text-aura-700 text-sm font-medium mb-6">
               <Code className="w-4 h-4 mr-2" />
-              {t('webDevelopment.hero.badge')}
+              Développement Web
             </div>
 
             {/* Headline */}
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight" 
+              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-gray-900 mb-8" 
               style={{fontFamily: 'Brockmann, sans-serif'}}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              {t('webDevelopment.hero.title')}
+              Créons votre site web
               <motion.span 
                 className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
-                {t('webDevelopment.hero.titleHighlight')}
+                parfait ensemble
               </motion.span>
             </motion.h1>
 
@@ -58,7 +60,7 @@ const WebDevelopmentHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              {t('webDevelopment.hero.description')}
+              Des sites web modernes, rapides et optimisés qui convertissent vos visiteurs en clients. Nous utilisons les dernières technologies pour créer des expériences web exceptionnelles.
             </motion.p>
 
             {/* Features */}
@@ -69,10 +71,10 @@ const WebDevelopmentHero = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
             >
               {[
-                { icon: Code, text: t('webDevelopment.hero.features.0') },
-                { icon: Palette, text: t('webDevelopment.hero.features.1') },
-                { icon: Zap, text: t('webDevelopment.hero.features.2') }
-              ].map((feature, index) => {
+              { icon: Code, text: "Technologies Modernes" },
+              { icon: Palette, text: "Design Responsive" },
+              { icon: Zap, text: "Performance Optimisée" }
+            ].map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div 
@@ -95,30 +97,30 @@ const WebDevelopmentHero = () => {
               <Button 
                 size="lg" 
                 onClick={handleContactClick}
-                className="bg-gradient-to-r from-aura-600 to-aura-700 hover:from-aura-700 hover:to-aura-800 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                {t('webDevelopment.hero.getStarted')}
+                Commencer Maintenant
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={handleContactClick}
+                onClick={handlePortfolioClick}
                 className="border-2 border-aura-600 text-aura-600 hover:bg-aura-50 px-10 py-5 text-lg font-semibold rounded-xl transition-all duration-300"
               >
-                {t('webDevelopment.hero.viewPortfolio')}
+                Voir Notre Portfolio
               </Button>
             </div>
 
             {/* Trust Indicators */}
             <div className="mt-16 pt-10 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-4">{t('webDevelopment.hero.trustedBy')}</p>
+              <p className="text-sm text-gray-500 mb-4">Ils nous font confiance</p>
               <div className="flex items-center justify-center lg:justify-start space-x-8 opacity-60">
                 <div className="text-2xl font-bold text-gray-400">200+</div>
-                <div className="text-sm text-gray-500">{t('webDevelopment.hero.stats.websitesBuilt')}</div>
+                <div className="text-sm text-gray-500">Sites Créés</div>
                 <div className="text-2xl font-bold text-gray-400">99%</div>
-                <div className="text-sm text-gray-500">{t('webDevelopment.hero.stats.clientSatisfaction')}</div>
+                <div className="text-sm text-gray-500">Satisfaction Client</div>
                 <div className="text-2xl font-bold text-gray-400">24/7</div>
-                <div className="text-sm text-gray-500">{t('webDevelopment.hero.stats.support')}</div>
+                <div className="text-sm text-gray-500">Support</div>
               </div>
             </div>
           </div>

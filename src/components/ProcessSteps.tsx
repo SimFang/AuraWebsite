@@ -1,7 +1,7 @@
 
 import React from "react";
 import { File, Code, Globe } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
+
 
 interface StepProps {
   number: string;
@@ -35,25 +35,25 @@ const Step = ({ number, title, description, icon }: StepProps) => {
 };
 
 const ProcessSteps = () => {
-  const { t } = useLocale();
+
   
   const steps = [
     {
       number: "1",
-      title: t("howItWorks.steps.0.title"),
-      description: t("howItWorks.steps.0.description"),
+      title: "Analyse de Vos Besoins",
+      description: "Nous analysons votre entreprise et vos processus pour créer une solution IA parfaitement adaptée.",
       icon: <File size={24} />
     },
     {
       number: "2",
-      title: t("howItWorks.steps.1.title"),
-      description: t("howItWorks.steps.1.description"),
+      title: "Développement Personnalisé",
+      description: "Notre équipe développe et configure votre solution IA selon vos spécifications exactes.",
       icon: <Code size={24} />
     },
     {
       number: "3",
-      title: t("howItWorks.steps.2.title"),
-      description: t("howItWorks.steps.2.description"),
+      title: "Déploiement et Formation",
+      description: "Nous déployons votre solution et formons votre équipe pour une utilisation optimale.",
       icon: <Globe size={24} />
     }
   ];
@@ -63,11 +63,11 @@ const ProcessSteps = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <div className="aura-chip mx-auto mb-4">
-            <span>{t("howItWorks.simpleProcess")}</span>
+            <span>Processus Simple</span>
           </div>
-          <h2 className="section-title mb-4">{t("howItWorks.title")}</h2>
+          <h2 className="section-title mb-4">Comment Ça Marche</h2>
           <p className="section-subtitle mx-auto">
-            {t("howItWorks.subtitle")}
+            Un processus en 3 étapes pour transformer votre entreprise avec l'intelligence artificielle
           </p>
         </div>
 
@@ -85,7 +85,7 @@ const ProcessSteps = () => {
         
         <div className="mt-16 text-center">
           <a href="#get-started" className="button-primary inline-flex items-center">
-            {t("howItWorks.getStarted")}
+            Commencer Maintenant
           </a>
         </div>
       </div>

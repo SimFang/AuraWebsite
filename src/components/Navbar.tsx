@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useLocale } from "@/contexts/LocaleContext";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -77,7 +76,7 @@ const Navbar = () => {
             className="nav-link"
             onClick={(e) => {
               e.preventDefault();
-              navigate('/web-development');
+              navigate('/');
             }}
           >
             {t("navbar.home")}
@@ -90,7 +89,7 @@ const Navbar = () => {
               onClick={() => setIsServicesOpen(!isServicesOpen)}
               onMouseEnter={() => setIsServicesOpen(true)}
             >
-              <span>Services</span>
+              <span>{t("navbar.services")}</span>
               <ChevronDown size={16} className={cn(
                 "transition-transform duration-200",
                 isServicesOpen ? "rotate-180" : ""
@@ -113,6 +112,7 @@ const Navbar = () => {
                     onClick={() => {
                       navigate(service.route);
                       setIsServicesOpen(false);
+                      scrollToTop();
                     }}
                     className={cn(
                       "w-full text-left px-4 py-2 text-sm transition-colors duration-200",
@@ -128,15 +128,16 @@ const Navbar = () => {
             </div>
           </div>
           
-          <a href="#pricing" className="nav-link">{t("navbar.pricing")}</a>
-          <a href="#how-it-works" className="nav-link">{t("navbar.howItWorks")}</a>
-          <a href="#get-started" className="nav-link">{t("navbar.getStarted")}</a>
-          <LanguageSwitcher />
+          <button 
+            onClick={() => navigate('/contact')}
+            className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          >
+            {t("navbar.start")}
+          </button>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
         <div className="md:hidden flex items-center gap-4">
-          <LanguageSwitcher />
           <button 
             className="text-gray-700 p-3 focus:outline-none" 
             onClick={toggleMenu}
@@ -158,7 +159,7 @@ const Navbar = () => {
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={(e) => {
               e.preventDefault();
-              navigate('/web-development');
+              navigate('/');
               setIsMenuOpen(false);
               document.body.style.overflow = '';
             }}
@@ -178,6 +179,7 @@ const Navbar = () => {
                     navigate(service.route);
                     setIsMenuOpen(false);
                     document.body.style.overflow = '';
+                    scrollToTop();
                   }}
                   className={cn(
                     "w-full text-center py-2 px-6 mb-2 rounded-lg transition-colors duration-200",
@@ -192,36 +194,16 @@ const Navbar = () => {
             })}
           </div>
           
-          <a 
-            href="#pricing" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+          <button 
             onClick={() => {
+              navigate('/contact');
               setIsMenuOpen(false);
               document.body.style.overflow = '';
             }}
+            className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white py-3 px-6 w-full text-center rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            {t("navbar.pricing")}
-          </a>
-          <a 
-            href="#how-it-works" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            {t("navbar.howItWorks")}
-          </a>
-          <a 
-            href="#get-started" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            {t("navbar.getStarted")}
-          </a>
+            {t("navbar.start")}
+          </button>
         </nav>
       </div>
     </header>

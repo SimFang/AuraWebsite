@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Star, Quote, TrendingUp, Clock, DollarSign, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "../contexts/LocaleContext";
+
 
 const AIChatbotTestimonials = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
+
 
   const handleContactClick = () => {
     navigate('/contact?service=ai-chatbot');
@@ -16,7 +16,7 @@ const AIChatbotTestimonials = () => {
       name: "Sarah Chen",
       role: "CEO",
       company: "TechFlow Solutions",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      avatar: "/placeholder.svg",
       content: "Our AI chatbot has been a game-changer. We've reduced support tickets by 75% while improving customer satisfaction scores. The ROI was evident within the first month.",
       metrics: {
         improvement: "75% reduction in support tickets",
@@ -100,26 +100,26 @@ const AIChatbotTestimonials = () => {
 
   const stats = [
     {
-      number: t('aiChatbot.testimonials.stats.businesses.number'),
-      label: t('aiChatbot.testimonials.stats.businesses.label'),
+      number: "500+",
+      label: "Entreprises Satisfaites",
       icon: Users,
       color: "from-blue-500 to-blue-600"
     },
     {
-      number: t('aiChatbot.testimonials.stats.conversations.number'),
-      label: t('aiChatbot.testimonials.stats.conversations.label'),
+      number: "2M+",
+      label: "Conversations Traitées",
       icon: Quote,
       color: "from-green-500 to-green-600"
     },
     {
-      number: t('aiChatbot.testimonials.stats.uptime.number'),
-      label: t('aiChatbot.testimonials.stats.uptime.label'),
+      number: "99.9%",
+      label: "Temps de Disponibilité",
       icon: Clock,
       color: "from-purple-500 to-purple-600"
     },
     {
-      number: t('aiChatbot.testimonials.stats.savings.number'),
-      label: t('aiChatbot.testimonials.stats.savings.label'),
+      number: "€2M+",
+      label: "Économies Générées",
       icon: DollarSign,
       color: "from-aura-500 to-aura-600"
     }
@@ -129,7 +129,7 @@ const AIChatbotTestimonials = () => {
 
   return (
     <motion.section 
-      className="py-24 bg-gradient-to-br from-gray-50 to-white"
+      className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -138,7 +138,7 @@ const AIChatbotTestimonials = () => {
       <div className="container px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -152,10 +152,10 @@ const AIChatbotTestimonials = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Star className="w-4 h-4 mr-2" />
-            {t('aiChatbot.testimonials.badge')}
+            Témoignages Clients
           </motion.div>
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8" 
             style={{ fontFamily: 'Brockmann, sans-serif' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,23 +163,23 @@ const AIChatbotTestimonials = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600">
-              {t('aiChatbot.testimonials.title')}
+              Ce Que Disent Nos Clients
             </span>
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {t('aiChatbot.testimonials.subtitle')}
+            Découvrez comment nos chatbots IA transforment les entreprises avec des résultats mesurables et une satisfaction client exceptionnelle.
           </motion.p>
         </motion.div>
 
         {/* Stats */}
         <motion.div 
-          className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-24"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -198,14 +198,14 @@ const AIChatbotTestimonials = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.div 
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-4`}
+                  className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-3 sm:mb-4`}
                   whileHover={{ rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <IconComponent className="w-8 h-8" />
+                  <IconComponent className="w-6 h-6 sm:w-8 sm:h-8" />
                 </motion.div>
                 <motion.div 
-                  className="text-3xl font-bold text-gray-900 mb-2"
+                  className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -214,7 +214,7 @@ const AIChatbotTestimonials = () => {
                   {stat.number}
                 </motion.div>
                 <motion.div 
-                  className="text-gray-600"
+                  className="text-sm sm:text-base text-gray-600"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -229,7 +229,7 @@ const AIChatbotTestimonials = () => {
 
         {/* Testimonials Grid */}
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-24"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -238,7 +238,7 @@ const AIChatbotTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index} 
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -246,32 +246,32 @@ const AIChatbotTestimonials = () => {
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Rating */}
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
 
               {/* Quote */}
-              <div className="relative mb-6">
-                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-aura-200" />
-                <p className="text-gray-700 leading-relaxed pl-6">
+              <div className="relative mb-4 sm:mb-6">
+                <Quote className="absolute -top-2 -left-2 w-6 h-6 sm:w-8 sm:h-8 text-aura-200" />
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed pl-4 sm:pl-6">
                   "{testimonial.content}"
                 </p>
               </div>
 
               {/* Metrics */}
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm">
-                  <TrendingUp className="w-4 h-4 text-green-500 mr-2" />
+              <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                <div className="flex items-center text-xs sm:text-sm">
+                  <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.improvement}</span>
                 </div>
-                <div className="flex items-center text-sm">
-                  <DollarSign className="w-4 h-4 text-green-500 mr-2" />
+                <div className="flex items-center text-xs sm:text-sm">
+                  <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.roi}</span>
                 </div>
-                <div className="flex items-center text-sm">
-                  <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                <div className="flex items-center text-xs sm:text-sm">
+                  <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.satisfaction}</span>
                 </div>
               </div>
@@ -281,18 +281,18 @@ const AIChatbotTestimonials = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  <div className="text-sm text-aura-600">{testimonial.company}</div>
+                  <div className="text-sm sm:text-base font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{testimonial.role}</div>
+                  <div className="text-xs sm:text-sm text-aura-600">{testimonial.company}</div>
                 </div>
               </div>
 
               {/* Industry Badge */}
-              <div className="mt-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-aura-100 text-aura-700 text-xs font-medium">
+              <div className="mt-3 sm:mt-4">
+                <span className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full bg-aura-100 text-aura-700 text-xs font-medium">
                   {testimonial.industry}
                 </span>
               </div>
@@ -318,7 +318,7 @@ const AIChatbotTestimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {t('aiChatbot.testimonials.socialProof.title')}
+            Preuves Sociales & Résultats
           </motion.h3>
           
           <motion.div 
@@ -336,7 +336,7 @@ const AIChatbotTestimonials = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="text-2xl font-bold text-aura-600 mb-1">4.9/5</div>
-              <div className="text-sm text-gray-600">{t('aiChatbot.testimonials.socialProof.averageRating')}</div>
+              <div className="text-sm text-gray-600">Note Moyenne</div>
               <div className="flex justify-center mt-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -351,7 +351,7 @@ const AIChatbotTestimonials = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <div className="text-2xl font-bold text-aura-600 mb-1">98%</div>
-              <div className="text-sm text-gray-600">{t('aiChatbot.testimonials.socialProof.retention')}</div>
+              <div className="text-sm text-gray-600">Taux de Rétention</div>
             </motion.div>
             <motion.div 
               className="text-center"
@@ -361,7 +361,7 @@ const AIChatbotTestimonials = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <div className="text-2xl font-bold text-aura-600 mb-1">24hrs</div>
-              <div className="text-sm text-gray-600">{t('aiChatbot.testimonials.socialProof.setupTime')}</div>
+              <div className="text-sm text-gray-600">Temps de Configuration</div>
             </motion.div>
             <motion.div 
               className="text-center"
@@ -371,7 +371,7 @@ const AIChatbotTestimonials = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
             >
               <div className="text-2xl font-bold text-aura-600 mb-1">300%</div>
-              <div className="text-sm text-gray-600">{t('aiChatbot.testimonials.socialProof.roi')}</div>
+              <div className="text-sm text-gray-600">ROI Moyen</div>
             </motion.div>
           </motion.div>
           
@@ -389,7 +389,7 @@ const AIChatbotTestimonials = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              {t('aiChatbot.testimonials.cta.primary')}
+              Commencer Maintenant
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.button>
             <motion.button 
@@ -399,7 +399,7 @@ const AIChatbotTestimonials = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              {t('aiChatbot.testimonials.cta.secondary')}
+              Demander une Démo
             </motion.button>
           </motion.div>
         </motion.div>

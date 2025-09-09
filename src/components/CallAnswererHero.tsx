@@ -3,18 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Phone, Clock, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
-
 const CallAnswererHero = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=call-answerer');
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-20">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-16">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-aura-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
@@ -29,25 +26,25 @@ const CallAnswererHero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-aura-100 text-aura-700 text-sm font-medium mb-6">
               <Phone className="w-4 h-4 mr-2" />
-              {t('callAnswerer.hero.badge')}
+              Répondeur Automatique IA
             </div>
 
             {/* Headline */}
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight" 
+              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-gray-900 mb-8" 
               style={{fontFamily: 'Brockmann, sans-serif'}}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              {t('callAnswerer.hero.title')}
+              Ne Manquez Plus Jamais
               <motion.span 
                 className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
-                {t('callAnswerer.hero.titleHighlight')}
+                Un Appel Important
               </motion.span>
             </motion.h1>
 
@@ -58,7 +55,7 @@ const CallAnswererHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              {t('callAnswerer.hero.subtitle')}
+              Notre répondeur automatique intelligent répond à vos appels 24/7, prend des messages détaillés et transfère les appels urgents. Améliorez votre service client sans effort supplémentaire.
             </motion.p>
 
             {/* Features */}
@@ -69,9 +66,9 @@ const CallAnswererHero = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
             >
               {[
-                { icon: Phone, text: t('callAnswerer.hero.features.professional') },
-                { icon: Clock, text: t('callAnswerer.hero.features.availability') },
-                { icon: Users, text: t('callAnswerer.hero.features.excellence') }
+                { icon: Phone, text: "Réponses Professionnelles" },
+                { icon: Clock, text: "Disponible 24/7" },
+                { icon: Users, text: "Service d'Excellence" }
               ].map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
@@ -95,16 +92,16 @@ const CallAnswererHero = () => {
               <Button 
                 size="lg" 
                 onClick={handleContactClick}
-                className="bg-gradient-to-r from-aura-600 to-aura-700 hover:from-aura-700 hover:to-aura-800 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                {t('callAnswerer.hero.cta.primary')}
+                Commencer Maintenant
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-2 border-aura-300 text-aura-700 hover:bg-aura-50 px-10 py-5 text-lg font-semibold rounded-xl transition-all duration-300"
               >
-                {t('callAnswerer.hero.cta.secondary')}
+                Voir la Démo
               </Button>
             </div>
           </div>

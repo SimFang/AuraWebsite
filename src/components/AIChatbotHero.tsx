@@ -3,17 +3,15 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Brain, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
 
 const AIChatbotHero = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=ai-chatbot');
   };
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-20">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-aura-50 via-white to-aura-100 py-16">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-aura-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
@@ -28,25 +26,25 @@ const AIChatbotHero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-aura-100 text-aura-700 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              {t('aiChatbot.hero.badge')}
+              IA Conversationnelle
             </div>
 
             {/* Headline */}
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight" 
+              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-gray-900 mb-8" 
               style={{fontFamily: 'Brockmann, sans-serif'}}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              {t('aiChatbot.hero.title')}
+              Révolutionnez Votre
               <motion.span 
                 className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
-                {t('aiChatbot.hero.titleHighlight')}
+                Service Client avec l'IA
               </motion.span>
             </motion.h1>
 
@@ -57,7 +55,7 @@ const AIChatbotHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              {t('aiChatbot.hero.subtitle')}
+              Créez un chatbot IA intelligent qui comprend vos clients et répond à leurs questions 24h/24, 7j/7 avec une précision remarquable.
             </motion.p>
 
             {/* Features */}
@@ -68,9 +66,9 @@ const AIChatbotHero = () => {
               transition={{ duration: 0.8, delay: 1.4 }}
             >
               {[
-                { icon: MessageCircle, text: t('aiChatbot.hero.features.support') },
-                { icon: Brain, text: t('aiChatbot.hero.features.knowledge') },
-                { icon: Zap, text: t('aiChatbot.hero.features.responses') }
+                { icon: MessageCircle, text: "Support 24/7" },
+                { icon: Brain, text: "IA Intelligente" },
+                { icon: Zap, text: "Réponses Instantanées" }
               ].map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
@@ -94,9 +92,9 @@ const AIChatbotHero = () => {
               <Button 
                 size="lg" 
                 onClick={handleContactClick}
-                className="bg-gradient-to-r from-aura-600 to-aura-700 hover:from-aura-700 hover:to-aura-800 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                {t('aiChatbot.hero.cta.primary')}
+                Créer Mon Chatbot
               </Button>
               <Button 
                 variant="outline" 
@@ -104,20 +102,20 @@ const AIChatbotHero = () => {
                 onClick={handleContactClick}
                 className="border-2 border-aura-600 text-aura-600 hover:bg-aura-50 px-10 py-5 text-lg font-semibold rounded-xl transition-all duration-300"
               >
-                {t('aiChatbot.hero.cta.secondary')}
+                Voir une Démo
               </Button>
             </div>
 
             {/* Trust Indicators */}
             <div className="mt-16 pt-10 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-4">{t('aiChatbot.hero.trust.title')}</p>
+              <p className="text-sm text-gray-500 mb-4">Ils nous font confiance</p>
               <div className="flex items-center justify-center lg:justify-start space-x-8 opacity-60">
                 <div className="text-2xl font-bold text-gray-400">500+</div>
-                <div className="text-sm text-gray-500">{t('aiChatbot.hero.trust.activeChatbots')}</div>
+                <div className="text-sm text-gray-500">Chatbots Actifs</div>
                 <div className="text-2xl font-bold text-gray-400">99.9%</div>
-                <div className="text-sm text-gray-500">{t('aiChatbot.hero.trust.uptime')}</div>
+                <div className="text-sm text-gray-500">Disponibilité</div>
                 <div className="text-2xl font-bold text-gray-400">24/7</div>
-                <div className="text-sm text-gray-500">{t('aiChatbot.hero.trust.support')}</div>
+                <div className="text-sm text-gray-500">Support</div>
               </div>
             </div>
           </div>
@@ -153,14 +151,14 @@ const AIChatbotHero = () => {
                     <MessageCircle className="w-6 h-6 text-white" />
                   </motion.div>
                   <div className="ml-3">
-                    <h3 className="font-semibold text-gray-900">{t('aiChatbot.hero.chat.assistantName')}</h3>
+                    <h3 className="font-semibold text-gray-900">Assistant IA</h3>
                     <motion.p 
                       className="text-sm text-green-500"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6, delay: 1.6 }}
                     >
-                      ● {t('aiChatbot.hero.chat.status')}
+                      ● En ligne
                     </motion.p>
                   </div>
                 </motion.div>
@@ -174,7 +172,7 @@ const AIChatbotHero = () => {
                     transition={{ duration: 0.6, delay: 1.8 }}
                   >
                     <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                      <p className="text-sm text-gray-800">{t('aiChatbot.hero.chat.greeting')}</p>
+                      <p className="text-sm text-gray-800">Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
                     </div>
                   </motion.div>
                   
@@ -185,7 +183,7 @@ const AIChatbotHero = () => {
                     transition={{ duration: 0.6, delay: 2.0 }}
                   >
                     <div className="bg-aura-500 text-white rounded-lg p-3 max-w-xs">
-                      <p className="text-sm">{t('aiChatbot.hero.chat.userQuestion')}</p>
+                      <p className="text-sm">Quels sont vos horaires d'ouverture ?</p>
                     </div>
                   </motion.div>
                   
@@ -196,7 +194,7 @@ const AIChatbotHero = () => {
                     transition={{ duration: 0.6, delay: 2.2 }}
                   >
                     <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                      <p className="text-sm text-gray-800">{t('aiChatbot.hero.chat.response')}</p>
+                      <p className="text-sm text-gray-800">Nous sommes ouverts du lundi au vendredi de 9h à 18h. Puis-je vous aider avec autre chose ?</p>
                     </div>
                   </motion.div>
                   

@@ -13,8 +13,8 @@ const ServicesSection = ({ activeService = "web-development" }: ServicesSectionP
   const services = [
     {
       id: "web-development",
-      title: t("servicesSection.webDevelopment.title"),
-      description: t("servicesSection.webDevelopment.description"),
+      title: "Développement Web",
+      description: "Sites web modernes, rapides et optimisés pour convertir vos visiteurs en clients.",
       route: "/",
       icon: (
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">

@@ -1,15 +1,14 @@
 import React from "react";
 import { FileSearch, Palette, Code, Rocket, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from '@/contexts/LocaleContext';
+
 
 const WebDevelopmentHowItWorks = () => {
-  const { t } = useLocale();
   const steps = [
     {
       step: "01",
-      title: "Discovery & Planning",
-      description: "We dive deep into your business goals, target audience, and requirements to create a comprehensive project roadmap and technical specifications.",
+      title: "Découverte & Planification",
+      description: "Nous plongeons profondément dans vos objectifs commerciaux, analysons vos besoins et créons une feuille de route détaillée pour votre projet.",
       icon: FileSearch,
       details: [
         "Business goals and target audience analysis",
@@ -21,8 +20,8 @@ const WebDevelopmentHowItWorks = () => {
     },
     {
       step: "02",
-      title: "Design & Prototyping",
-      description: "Our design team creates stunning, user-focused designs that reflect your brand identity and provide exceptional user experiences across all devices.",
+      title: "Conception & Prototypage",
+      description: "Notre équipe crée des wireframes et des prototypes interactifs qui donnent vie à votre vision avant le développement.",
       icon: Palette,
       details: [
         "Custom UI/UX design and wireframing",
@@ -34,8 +33,8 @@ const WebDevelopmentHowItWorks = () => {
     },
     {
       step: "03",
-      title: "Development & Testing",
-      description: "We build your website using modern technologies and best practices, with rigorous testing to ensure optimal performance and security.",
+      title: "Développement & Tests",
+      description: "Nous construisons votre solution en utilisant les dernières technologies, avec des tests rigoureux à chaque étape.",
       icon: Code,
       details: [
         "Clean, scalable code with modern frameworks",
@@ -47,8 +46,8 @@ const WebDevelopmentHowItWorks = () => {
     },
     {
       step: "04",
-      title: "Launch & Support",
-      description: "Your website goes live with full deployment support, ongoing maintenance, and continuous optimization to ensure peak performance.",
+      title: "Lancement & Support",
+      description: "Nous déployons votre projet et fournissons un support continu pour assurer son succès à long terme.",
       icon: Rocket,
       details: [
         "Seamless deployment and domain setup",
@@ -86,7 +85,7 @@ const WebDevelopmentHowItWorks = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Code className="w-4 h-4 mr-2" />
-            {t('webDevelopment.howItWorks.badge')}
+            Comment Ça Marche
           </motion.div>
           <motion.h2 
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
@@ -96,7 +95,7 @@ const WebDevelopmentHowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('webDevelopment.howItWorks.title')}
+            Notre Processus de Développement
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
@@ -105,7 +104,7 @@ const WebDevelopmentHowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('webDevelopment.howItWorks.subtitle')}
+            De l'idée au lancement, découvrez notre approche structurée pour créer des sites web exceptionnels qui dépassent vos attentes.
           </motion.p>
         </motion.div>
 
@@ -168,7 +167,7 @@ const WebDevelopmentHowItWorks = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.6, delay: index * 0.2 + 0.7 }}
                         >
-                          Step {step.step}
+                          Étape {step.step}
                         </motion.div>
                         <motion.h3 
                           className="text-2xl font-bold text-gray-900" 
@@ -178,7 +177,7 @@ const WebDevelopmentHowItWorks = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.6, delay: index * 0.2 + 0.8 }}
                         >
-                          {t(`webDevelopment.howItWorks.steps.${index}.title`)}
+                          {step.title}
                         </motion.h3>
                       </div>
                     </motion.div>
@@ -190,7 +189,7 @@ const WebDevelopmentHowItWorks = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: index * 0.2 + 0.9 }}
                     >
-                      {t(`webDevelopment.howItWorks.steps.${index}.description`)}
+                      {step.description}
                     </motion.p>
                     
                     <motion.ul 
@@ -211,7 +210,7 @@ const WebDevelopmentHowItWorks = () => {
                           whileHover={{ x: 5 }}
                         >
                           <ArrowRight className="w-5 h-5 text-aura-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{t(`webDevelopment.howItWorks.steps.${index}.details.${detailIndex}`)}</span>
+                          <span className="text-gray-700">{detail}</span>
                         </motion.li>
                       ))}
                     </motion.ul>
@@ -273,15 +272,15 @@ const WebDevelopmentHowItWorks = () => {
                         <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
                           <div className="space-y-4">
                             <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
-                              <span className="text-sm text-gray-600">Frontend Development</span>
+                              <span className="text-sm text-gray-600">Frontend</span>
                               <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                             </div>
                             <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
-                              <span className="text-sm text-gray-600">Backend API</span>
+                              <span className="text-sm text-gray-600">Backend</span>
                               <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                             </div>
                             <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
-                              <span className="text-sm text-gray-600">Testing Suite</span>
+                              <span className="text-sm text-gray-600">Tests</span>
                               <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
                             </div>
                             <div className="flex items-center justify-between bg-white rounded-lg p-3 shadow-sm">
@@ -351,7 +350,7 @@ const WebDevelopmentHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('webDevelopment.howItWorks.timeline.title')}
+              Chronologie du Projet
             </motion.h3>
             <motion.p 
               className="text-gray-600 mb-6"
@@ -360,7 +359,7 @@ const WebDevelopmentHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {t('webDevelopment.howItWorks.timeline.description')}
+              Votre nouveau site web sera prêt plus rapidement que vous ne le pensez, avec un support continu pour assurer son succès.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -370,9 +369,9 @@ const WebDevelopmentHowItWorks = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               {[
-                { value: "4-8", label: "Weeks to Launch" },
-                { value: "24/7", label: "Ongoing Support" },
-                { value: "∞", label: "Future Updates" }
+                { value: "4-8", label: "Semaines au Lancement" },
+                { value: "24/7", label: "Support Continu" },
+                { value: "∞", label: "Mises à Jour Futures" }
               ].map((stat, index) => (
                 <motion.div 
                   key={index}
@@ -383,8 +382,8 @@ const WebDevelopmentHowItWorks = () => {
                   transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className="text-2xl font-bold text-aura-600">{t(`webDevelopment.howItWorks.timeline.stats.${index}.value`)}</div>
-                  <div className="text-sm text-gray-600">{t(`webDevelopment.howItWorks.timeline.stats.${index}.label`)}</div>
+                  <div className="text-2xl font-bold text-aura-600">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>

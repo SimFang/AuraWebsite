@@ -1,11 +1,8 @@
 
 import React from "react";
-import { useLocale } from "@/contexts/LocaleContext";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { Code, Smartphone, Bot, Globe, Zap, Shield } from "lucide-react";
 
 const Footer = () => {
-  const { t } = useLocale();
   
   return (
     <footer className="w-full bg-gradient-to-br from-gray-900 to-gray-800 py-12 text-white">
@@ -17,7 +14,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white">Websora</h3>
             </div>
             <p className="text-gray-300 text-sm mb-6">
-              {t("footer.description")}
+              Solutions technologiques innovantes pour transformer votre présence numérique. Spécialisés dans le développement web, les chatbots IA et l'automatisation.
             </p>
             
             {/* Tech Tools */}
@@ -25,37 +22,34 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t("footer.services")}</h3>
+            <h3 className="font-bold text-white mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><a href="/" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Globe className="w-4 h-4 mr-2" />{t("footer.servicesLinks.webDevelopment")}</a></li>
-              <li><a href="/ai-chatbot" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Bot className="w-4 h-4 mr-2" />{t("footer.servicesLinks.aiChatbots")}</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Smartphone className="w-4 h-4 mr-2" />{t("footer.servicesLinks.mobileApps")}</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Zap className="w-4 h-4 mr-2" />{t("footer.servicesLinks.automation")}</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Globe className="w-4 h-4 mr-2" />Développement Web</a></li>
+              <li><a href="/ai-chatbot" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Bot className="w-4 h-4 mr-2" />Chatbots IA</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Smartphone className="w-4 h-4 mr-2" />Applications Mobile</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-aura-400 text-sm flex items-center transition-colors"><Zap className="w-4 h-4 mr-2" />Automatisation</a></li>
             </ul>
           </div>
           
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-white mb-4">{t("footer.contact")}</h3>
+            <h3 className="font-bold text-white mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="text-gray-300 text-sm">
-                <span className="block mb-1">{t("footer.email")}</span>
+                <span className="block mb-1">Email</span>
                 <a href="mailto:contact.websora@gmail.com" className="text-aura-400 hover:text-aura-300 transition-colors">contact.websora@gmail.com</a>
               </div>
               <div className="text-gray-300 text-sm">
-                <span className="block mb-1">{t("footer.expertise")}</span>
-                <span className="text-gray-400">Technology Solutions & Digital Innovation</span>
+                <span className="block mb-1">Expertise</span>
+                <span className="text-gray-400">Solutions Technologiques & Innovation Numérique</span>
               </div>
-            </div>
-            <div className="mt-6">
-              <LanguageSwitcher />
             </div>
           </div>
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-6 text-center">
           <p className="text-sm text-gray-500">
-            {t("footer.copyright").replace("{year}", new Date().getFullYear().toString())}
+            © {new Date().getFullYear()} Websora. Tous droits réservés.
           </p>
         </div>
       </div>

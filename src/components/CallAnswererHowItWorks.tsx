@@ -1,62 +1,62 @@
 import React from "react";
 import { Phone, Settings, Users, Rocket, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
+
 
 const CallAnswererHowItWorks = () => {
-  const { t } = useLocale();
+
   
   const steps = [
     {
       step: "01",
-      title: t('callAnswerer.howItWorks.steps.setup.title'),
-      description: t('callAnswerer.howItWorks.steps.setup.description'),
+      title: "Configuration Initiale",
+      description: "Personnalisez votre répondeur selon vos besoins spécifiques",
       icon: Settings,
       details: [
-        t('callAnswerer.howItWorks.steps.setup.details.hours'),
-        t('callAnswerer.howItWorks.steps.setup.details.inquiries'),
-        t('callAnswerer.howItWorks.steps.setup.details.booking'),
-        t('callAnswerer.howItWorks.steps.setup.details.protocols')
+        "Définition des heures d'ouverture",
+        "Types de demandes à traiter",
+        "Système de prise de rendez-vous",
+        "Protocoles de transfert d'appels"
       ],
       color: "from-blue-500 to-blue-600"
     },
     {
       step: "02",
-      title: t('callAnswerer.howItWorks.steps.training.title'),
-      description: t('callAnswerer.howItWorks.steps.training.description'),
+      title: "Formation de l'IA",
+      description: "Entraînement personnalisé selon votre secteur d'activité",
       icon: Phone,
       details: [
-        t('callAnswerer.howItWorks.steps.training.details.custom'),
-        t('callAnswerer.howItWorks.steps.training.details.tone'),
-        t('callAnswerer.howItWorks.steps.training.details.integration'),
-        t('callAnswerer.howItWorks.steps.training.details.protocols')
+        "Scripts personnalisés",
+        "Ton et style de communication",
+        "Intégration avec vos systèmes",
+         "Protocoles de sécurité"
       ],
       color: "from-aura-500 to-aura-600"
     },
     {
       step: "03",
-      title: t('callAnswerer.howItWorks.steps.integration.title'),
-      description: t('callAnswerer.howItWorks.steps.integration.description'),
-      icon: Users,
-      details: [
-        t('callAnswerer.howItWorks.steps.integration.details.phone'),
-        t('callAnswerer.howItWorks.steps.integration.details.calendar'),
-        t('callAnswerer.howItWorks.steps.integration.details.testing'),
-        t('callAnswerer.howItWorks.steps.integration.details.optimization')
-      ],
+      title: "Intégration Système",
+       description: "Connexion avec vos outils existants",
+       icon: Users,
+       details: [
+         "Configuration du système téléphonique",
+         "Synchronisation calendrier",
+         "Tests et validation",
+         "Optimisation des performances"
+       ],
       color: "from-purple-500 to-purple-600"
     },
     {
       step: "04",
-      title: t('callAnswerer.howItWorks.steps.launch.title'),
-      description: t('callAnswerer.howItWorks.steps.launch.description'),
-      icon: Rocket,
-      details: [
-        t('callAnswerer.howItWorks.steps.launch.details.rollout'),
-        t('callAnswerer.howItWorks.steps.launch.details.tracking'),
-        t('callAnswerer.howItWorks.steps.launch.details.learning'),
-        t('callAnswerer.howItWorks.steps.launch.details.updates')
-      ],
+      title: "Mise en Service",
+       description: "Déploiement et suivi continu",
+       icon: Rocket,
+       details: [
+         "Déploiement progressif",
+         "Suivi des performances",
+         "Apprentissage continu",
+         "Mises à jour régulières"
+       ],
       color: "from-green-500 to-green-600"
     }
   ];
@@ -64,7 +64,7 @@ const CallAnswererHowItWorks = () => {
   return (
     <motion.section 
       id="how-it-works" 
-      className="py-24 bg-white"
+      className="py-12 sm:py-16 lg:py-24 bg-white"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -73,7 +73,7 @@ const CallAnswererHowItWorks = () => {
       <div className="container px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -87,17 +87,17 @@ const CallAnswererHowItWorks = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Phone className="w-4 h-4 mr-2" />
-            {t('callAnswerer.howItWorks.badge')}
+            Comment Ça Marche
           </motion.div>
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8" 
             style={{fontFamily: 'Brockmann, sans-serif'}}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('callAnswerer.howItWorks.title')}
+            Mise en Place
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -105,22 +105,22 @@ const CallAnswererHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('callAnswerer.howItWorks.titleHighlight')}
+              Simple et Rapide
             </motion.span>
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('callAnswerer.howItWorks.subtitle')}
+            En seulement quelques étapes, votre assistant IA sera opérationnel et prêt à répondre aux appels de vos clients 24h/24, 7j/7.
           </motion.p>
         </motion.div>
 
         {/* Steps */}
-        <div className="space-y-24">
+        <div className="space-y-12 sm:space-y-16 lg:space-y-24">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             const isEven = index % 2 === 0;
@@ -128,24 +128,24 @@ const CallAnswererHowItWorks = () => {
             return (
               <motion.div 
                 key={index}
-                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
+                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 sm:gap-12 lg:gap-20`}
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
                 {/* Content */}
-                <div className="flex-1 text-center lg:text-left">
+                <div className="flex-1 text-center lg:text-left px-4 sm:px-0">
                   <motion.div 
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-aura-100 to-aura-200 mb-6"
+                    className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-aura-100 to-aura-200 mb-4 sm:mb-6"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <span className="text-2xl font-bold text-aura-700">{step.step}</span>
+                    <span className="text-lg sm:text-2xl font-bold text-aura-700">{step.step}</span>
                   </motion.div>
                   
                   <motion.h3 
-                    className="text-3xl font-bold text-gray-900 mb-6"
+                    className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6"
                     initial={{ opacity: 0, x: isEven ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -155,7 +155,7 @@ const CallAnswererHowItWorks = () => {
                   </motion.h3>
                   
                   <motion.p 
-                    className="text-lg text-gray-600 mb-8 leading-relaxed"
+                    className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed"
                     initial={{ opacity: 0, x: isEven ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -180,8 +180,8 @@ const CallAnswererHowItWorks = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.8 + detailIndex * 0.1 }}
                       >
-                        <ArrowRight className="w-4 h-4 text-aura-600 mr-3 flex-shrink-0" />
-                        <span>{detail}</span>
+                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-aura-600 mr-2 sm:mr-3 flex-shrink-0" />
+                        <span className="text-sm sm:text-base">{detail}</span>
                       </motion.li>
                     ))}
                   </motion.ul>
@@ -197,7 +197,7 @@ const CallAnswererHowItWorks = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <div className={`w-80 h-80 rounded-3xl bg-gradient-to-br ${step.color} p-1 shadow-2xl`}>
+                    <div className={`w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-br ${step.color} p-1 shadow-2xl`}>
                       <div className="w-full h-full bg-white rounded-3xl flex items-center justify-center relative overflow-hidden">
                         {/* Background Pattern */}
                         <div className="absolute inset-0 opacity-5">
@@ -262,7 +262,7 @@ const CallAnswererHowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {t('callAnswerer.howItWorks.cta.title')}
+            Prêt à automatiser votre service client ? Commencez dès maintenant !
           </motion.p>
           <motion.button 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-aura-600 to-aura-700 text-white font-semibold rounded-xl hover:from-aura-700 hover:to-aura-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -273,7 +273,7 @@ const CallAnswererHowItWorks = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {t('callAnswerer.howItWorks.cta.button')}
+            Démarrer Maintenant
             <ArrowRight className="w-5 h-5 ml-2" />
           </motion.button>
         </motion.div>

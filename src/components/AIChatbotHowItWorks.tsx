@@ -1,61 +1,61 @@
 import React from "react";
 import { FileText, Brain, MessageCircle, Rocket, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
+
 
 const AIChatbotHowItWorks = () => {
-  const { t } = useLocale();
+
   
   const steps = [
     {
       step: "01",
-      title: t('aiChatbot.howItWorks.steps.analysis.title'),
-      description: t('aiChatbot.howItWorks.steps.analysis.description'),
+      title: "Analyse de Vos Besoins",
+      description: "Nous analysons votre entreprise et vos processus pour créer un chatbot parfaitement adapté.",
       icon: FileText,
       details: [
-        t('aiChatbot.howItWorks.steps.analysis.details.0'),
-        t('aiChatbot.howItWorks.steps.analysis.details.1'),
-        t('aiChatbot.howItWorks.steps.analysis.details.2'),
-        t('aiChatbot.howItWorks.steps.analysis.details.3')
+        "Audit complet de vos processus client",
+        "Identification des cas d'usage prioritaires",
+        "Analyse de votre base de connaissances",
+        "Définition des objectifs et KPIs"
       ],
       color: "from-blue-500 to-blue-600"
     },
     {
       step: "02",
-      title: t('aiChatbot.howItWorks.steps.training.title'),
-      description: t('aiChatbot.howItWorks.steps.training.description'),
+      title: "Entraînement de l'IA",
+      description: "Nous entraînons votre chatbot avec vos données spécifiques pour des réponses précises.",
       icon: Brain,
       details: [
-        t('aiChatbot.howItWorks.steps.training.details.0'),
-        t('aiChatbot.howItWorks.steps.training.details.1'),
-        t('aiChatbot.howItWorks.steps.training.details.2'),
-        t('aiChatbot.howItWorks.steps.training.details.3')
+        "Formation sur vos données et documentation",
+        "Personnalisation du ton et de la voix",
+        "Tests et optimisation des réponses",
+        "Validation avec votre équipe"
       ],
       color: "from-aura-500 to-aura-600"
     },
     {
       step: "03",
-      title: t('aiChatbot.howItWorks.steps.integration.title'),
-      description: t('aiChatbot.howItWorks.steps.integration.description'),
+      title: "Intégration & Configuration",
+      description: "Nous intégrons le chatbot dans vos systèmes existants pour une expérience fluide.",
       icon: MessageCircle,
       details: [
-        t('aiChatbot.howItWorks.steps.integration.details.0'),
-        t('aiChatbot.howItWorks.steps.integration.details.1'),
-        t('aiChatbot.howItWorks.steps.integration.details.2'),
-        t('aiChatbot.howItWorks.steps.integration.details.3')
+        "Intégration sur votre site web",
+        "Connexion avec vos outils CRM",
+        "Tests complets et ajustements",
+        "Formation de votre équipe"
       ],
       color: "from-purple-500 to-purple-600"
     },
     {
       step: "04",
-      title: t('aiChatbot.howItWorks.steps.launch.title'),
-      description: t('aiChatbot.howItWorks.steps.launch.description'),
+      title: "Lancement & Optimisation",
+      description: "Mise en ligne de votre chatbot avec suivi continu et optimisations.",
       icon: Rocket,
       details: [
-        t('aiChatbot.howItWorks.steps.launch.details.0'),
-        t('aiChatbot.howItWorks.steps.launch.details.1'),
-        t('aiChatbot.howItWorks.steps.launch.details.2'),
-        t('aiChatbot.howItWorks.steps.launch.details.3')
+        "Déploiement progressif et sécurisé",
+        "Monitoring des performances en temps réel",
+        "Apprentissage continu et améliorations",
+        "Support technique 24/7"
       ],
       color: "from-green-500 to-green-600"
     }
@@ -97,7 +97,7 @@ const AIChatbotHowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('aiChatbot.howItWorks.title')}
+            Comment Nous Créons
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -105,7 +105,7 @@ const AIChatbotHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('aiChatbot.howItWorks.titleHighlight')}
+              Votre Chatbot IA ?
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -115,7 +115,7 @@ const AIChatbotHowItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('aiChatbot.howItWorks.subtitle')}
+            Un processus éprouvé en 4 étapes pour créer un chatbot IA qui transforme votre service client et booste vos conversions.
           </motion.p>
         </motion.div>
 
@@ -178,7 +178,7 @@ const AIChatbotHowItWorks = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.6, delay: index * 0.2 + 0.7 }}
                         >
-                          {t('aiChatbot.howItWorks.stepLabel')} {step.step}
+                          Étape {step.step}
                         </motion.div>
                         <motion.h3 
                           className="text-2xl font-bold text-gray-900" 
@@ -352,7 +352,7 @@ const AIChatbotHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('aiChatbot.howItWorks.timeline.title')}
+              Délais de Livraison
             </motion.h3>
             <motion.p 
               className="text-gray-600 mb-6"
@@ -361,7 +361,7 @@ const AIChatbotHowItWorks = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {t('aiChatbot.howItWorks.timeline.description')}
+              Des délais transparents pour une mise en œuvre rapide et efficace.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -371,9 +371,9 @@ const AIChatbotHowItWorks = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               {[
-                { value: "7-14", label: t('aiChatbot.howItWorks.timeline.stats.launch') },
-                { value: "24/7", label: t('aiChatbot.howItWorks.timeline.stats.support') },
-                { value: "∞", label: t('aiChatbot.howItWorks.timeline.stats.learning') }
+                { value: "7-14", label: "Jours pour le lancement" },
+                { value: "24/7", label: "Support disponible" },
+                { value: "∞", label: "Apprentissage continu" }
               ].map((stat, index) => (
                 <motion.div 
                   key={index}

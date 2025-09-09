@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Star, Quote, TrendingUp, Clock, DollarSign, Users, ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
+
 const CallAnswererTestimonials = () => {
   const navigate = useNavigate();
+
 
   const handleContactClick = () => {
     navigate('/contact?service=call-answerer');
@@ -12,113 +14,113 @@ const CallAnswererTestimonials = () => {
   
   const testimonials = [
     {
-      name: "Michael Chen",
-      role: "Restaurant Owner",
-      company: "Golden Dragon Bistro",
+      name: "Marc Dubois",
+      role: "Directeur Général",
+      company: "TechStart Solutions",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      content: "Our AI call answerer handles reservations perfectly, even during our busiest hours. We never miss a booking anymore, and customers love the instant response. It's like having a dedicated receptionist 24/7.",
+      content: "Depuis l'implémentation du répondeur IA d'Aura, nous n'avons plus jamais manqué un appel important. Le système comprend parfaitement nos clients et les dirige vers le bon service. C'est révolutionnaire !",
       metrics: {
-        improvement: "95% of calls answered instantly",
-        roi: "$25k additional bookings monthly",
-        satisfaction: "4.9/5 customer satisfaction"
+        improvement: "+85% d'appels traités",
+        roi: "300% de ROI",
+        satisfaction: "96% de satisfaction client"
       },
-      industry: "Restaurant",
+      industry: "Technologie",
       rating: 5
     },
     {
-      name: "Dr. Sarah Martinez",
-      role: "Practice Manager",
-      company: "HealthFirst Medical Center",
+      name: "Sophie Martin",
+      role: "Responsable Service Client",
+      company: "MediCare Plus",
       avatar: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
-      content: "The AI handles appointment scheduling, prescription refills, and basic inquiries flawlessly. Our staff can focus on patient care while the system manages routine calls with medical-grade accuracy.",
+      content: "L'IA d'Aura a transformé notre service client. Elle gère les urgences 24/7 et transfère intelligemment les cas complexes. Nos patients sont ravis de la réactivité !",
       metrics: {
-        improvement: "80% reduction in missed calls",
-        roi: "$40k annual staff savings",
-        satisfaction: "98% appointment accuracy"
+        improvement: "+70% de disponibilité",
+        roi: "250% de ROI",
+        satisfaction: "94% de satisfaction patient"
       },
-      industry: "Healthcare",
+      industry: "Santé",
       rating: 5
     },
     {
-      name: "James Wilson",
-      role: "Service Manager",
-      company: "ProFix Home Services",
+      name: "Pierre Leroy",
+      role: "Fondateur",
+      company: "Immobilier Pro",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      content: "Emergency calls are handled immediately, even at 3 AM. The AI schedules service appointments, provides quotes, and handles customer inquiries. Our response time has improved dramatically.",
+      content: "Grâce au répondeur IA, nous capturons tous les prospects, même en dehors des heures d'ouverture. Il qualifie automatiquement les demandes et programme les visites. Un vrai game-changer !",
       metrics: {
-        improvement: "24/7 emergency response",
-        roi: "60% increase in bookings",
-        satisfaction: "4.8/5 service rating"
+        improvement: "+120% de leads capturés",
+        roi: "400% de ROI",
+        satisfaction: "92% de satisfaction prospect"
       },
-      industry: "Home Services",
+      industry: "Immobilier",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      role: "Salon Owner",
-      company: "Elegance Beauty Spa",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-      content: "Booking appointments has never been easier for our clients. The AI knows our services, pricing, and availability perfectly. We've eliminated double bookings and our schedule is always optimized.",
+      name: "Julie Moreau",
+      role: "Directrice Marketing",
+      company: "Fashion Boutique",
+      avatar: "/placeholder.svg",
+      content: "L'IA d'Aura gère parfaitement nos commandes téléphoniques et les demandes de renseignements. Elle connaît tous nos produits et peut même prendre des réservations. Impressionnant !",
       metrics: {
-        improvement: "Zero double bookings",
-        roi: "$18k monthly revenue increase",
-        satisfaction: "4.9/5 booking experience"
+        improvement: "+60% de commandes téléphoniques",
+        roi: "280% de ROI",
+        satisfaction: "95% de satisfaction client"
       },
-      industry: "Beauty & Wellness",
+      industry: "Commerce",
       rating: 5
     },
     {
-      name: "Robert Davis",
-      role: "Property Manager",
-      company: "Elite Real Estate",
+      name: "Antoine Rousseau",
+      role: "Gérant",
+      company: "Restaurant Le Gourmet",
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-      content: "Property inquiries are handled instantly, viewings are scheduled automatically, and tenant requests are processed efficiently. Our conversion rate has increased significantly since implementation.",
+      content: "Notre répondeur IA prend les réservations 24/7, gère les annulations et informe sur nos menus. Plus jamais de table vide par manque de disponibilité téléphonique !",
       metrics: {
-        improvement: "50% faster response time",
-        roi: "$75k additional sales",
-        satisfaction: "4.7/5 client satisfaction"
+        improvement: "+45% de réservations",
+        roi: "220% de ROI",
+        satisfaction: "98% de satisfaction client"
       },
-      industry: "Real Estate",
+      industry: "Restauration",
       rating: 5
     },
     {
-      name: "Amanda Foster",
-      role: "Clinic Director",
-      company: "VetCare Animal Hospital",
+      name: "Camille Dubois",
+      role: "Directrice",
+      company: "Cabinet Juridique Dubois",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      content: "Pet emergencies require immediate attention. Our AI call answerer triages calls perfectly, schedules appointments, and provides basic care guidance. Pet owners feel heard and cared for instantly.",
+      content: "L'IA filtre intelligemment les appels urgents et programme les consultations. Elle respecte parfaitement la confidentialité et dirige chaque client vers le bon avocat spécialisé.",
       metrics: {
-        improvement: "100% emergency call coverage",
-        roi: "$30k cost reduction",
-        satisfaction: "4.8/5 owner satisfaction"
+        improvement: "+75% d'efficacité",
+        roi: "350% de ROI",
+        satisfaction: "97% de satisfaction client"
       },
-      industry: "Veterinary",
+      industry: "Juridique",
       rating: 5
     }
   ];
 
   const stats = [
     {
-      number: "5,000+",
-      label: "Businesses Served",
+      number: "500+",
+      label: "Entreprises Satisfaites",
       icon: Users,
       color: "from-blue-500 to-blue-600"
     },
     {
-      number: "2M+",
-      label: "Calls Answered",
+      number: "1M+",
+      label: "Appels Traités",
       icon: Phone,
       color: "from-green-500 to-green-600"
     },
     {
       number: "99.9%",
-      label: "Uptime Guarantee",
+      label: "Disponibilité",
       icon: Clock,
       color: "from-purple-500 to-purple-600"
     },
     {
-      number: "$50M+",
-      label: "Revenue Generated",
+      number: "€2M+",
+      label: "Revenus Générés",
       icon: DollarSign,
       color: "from-aura-500 to-aura-600"
     }
@@ -126,7 +128,7 @@ const CallAnswererTestimonials = () => {
 
   return (
     <motion.section 
-      className="py-24 bg-gradient-to-br from-gray-50 to-white"
+      className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -135,7 +137,7 @@ const CallAnswererTestimonials = () => {
       <div className="container px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -149,10 +151,10 @@ const CallAnswererTestimonials = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Star className="w-4 h-4 mr-2" />
-            Customer Success Stories
+            Témoignages Clients
           </motion.div>
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8" 
             style={{ fontFamily: 'Brockmann, sans-serif' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -160,23 +162,23 @@ const CallAnswererTestimonials = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600">
-              Real Results from Real Businesses
+              Ce Que Disent Nos Clients
             </span>
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Discover how businesses across industries have transformed their customer service and boosted revenue with our AI call answering solution.
+            Découvrez comment notre répondeur IA a transformé la communication de centaines d'entreprises à travers la France.
           </motion.p>
         </motion.div>
 
         {/* Stats */}
         <motion.div 
-          className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-24"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -195,14 +197,14 @@ const CallAnswererTestimonials = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.div 
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-4`}
+                  className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-r ${stat.color} text-white mb-3 sm:mb-4`}
                   whileHover={{ rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <IconComponent className="w-8 h-8" />
+                  <IconComponent className="w-6 h-6 sm:w-8 sm:h-8" />
                 </motion.div>
                 <motion.div 
-                  className="text-3xl font-bold text-gray-900 mb-2"
+                  className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -211,7 +213,7 @@ const CallAnswererTestimonials = () => {
                   {stat.number}
                 </motion.div>
                 <motion.div 
-                  className="text-gray-600"
+                  className="text-sm sm:text-base text-gray-600"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -226,7 +228,7 @@ const CallAnswererTestimonials = () => {
 
         {/* Testimonials Grid */}
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-24"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -235,7 +237,7 @@ const CallAnswererTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index} 
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -243,32 +245,32 @@ const CallAnswererTestimonials = () => {
               whileHover={{ y: -5, scale: 1.02 }}
             >
               {/* Rating */}
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
 
               {/* Quote */}
-              <div className="relative mb-6">
-                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-aura-200" />
-                <p className="text-gray-700 leading-relaxed pl-6">
+              <div className="relative mb-4 sm:mb-6">
+                <Quote className="absolute -top-2 -left-2 w-6 h-6 sm:w-8 sm:h-8 text-aura-200" />
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed pl-4 sm:pl-6">
                   "{testimonial.content}"
                 </p>
               </div>
 
               {/* Metrics */}
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm">
-                  <TrendingUp className="w-4 h-4 text-green-500 mr-2" />
+              <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
+                <div className="flex items-center text-xs sm:text-sm">
+                  <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.improvement}</span>
                 </div>
-                <div className="flex items-center text-sm">
-                  <DollarSign className="w-4 h-4 text-green-500 mr-2" />
+                <div className="flex items-center text-xs sm:text-sm">
+                  <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.roi}</span>
                 </div>
-                <div className="flex items-center text-sm">
-                  <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                <div className="flex items-center text-xs sm:text-sm">
+                  <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 mr-1 sm:mr-2" />
                   <span className="text-gray-600">{testimonial.metrics.satisfaction}</span>
                 </div>
               </div>
@@ -278,18 +280,18 @@ const CallAnswererTestimonials = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  <div className="text-sm text-aura-600">{testimonial.company}</div>
+                  <div className="text-sm sm:text-base font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{testimonial.role}</div>
+                  <div className="text-xs sm:text-sm text-aura-600">{testimonial.company}</div>
                 </div>
               </div>
 
               {/* Industry Badge */}
-              <div className="mt-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-aura-100 text-aura-700 text-xs font-medium">
+              <div className="mt-3 sm:mt-4">
+                <span className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full bg-aura-100 text-aura-700 text-xs font-medium">
                   {testimonial.industry}
                 </span>
               </div>
@@ -313,7 +315,7 @@ const CallAnswererTestimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Join Thousands of Businesses Never Missing a Call
+            Rejoignez Plus de 500 Entreprises Satisfaites
           </motion.h3>
           
           <motion.div 
@@ -384,7 +386,7 @@ const CallAnswererTestimonials = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              Start Answering Every Call
+              Commencer Maintenant
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.button>
             <motion.button 
@@ -394,7 +396,7 @@ const CallAnswererTestimonials = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              Read More Success Stories
+              Voir une Démo
             </motion.button>
           </motion.div>
         </motion.div>

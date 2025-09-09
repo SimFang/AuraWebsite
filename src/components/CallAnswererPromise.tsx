@@ -1,51 +1,49 @@
 import React from "react";
 import { Clock, DollarSign, Users, TrendingUp, Shield, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
 
 const CallAnswererPromise = () => {
-  const { t } = useLocale();
   const promises = [
     {
       icon: Clock,
-      title: t('callAnswerer.promise.promises.availability.title'),
-      description: t('callAnswerer.promise.promises.availability.description'),
-      metric: t('callAnswerer.promise.promises.availability.metric'),
+      title: "Disponibilité 24/7",
+      description: "Votre assistant IA répond à tous les appels, même en dehors des heures d'ouverture",
+      metric: "24h/24, 7j/7",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: DollarSign,
-      title: t('callAnswerer.promise.promises.costs.title'),
-      description: t('callAnswerer.promise.promises.costs.description'),
-      metric: t('callAnswerer.promise.promises.costs.metric'),
+      title: "Réduction des Coûts",
+      description: "Économisez jusqu'à 80% sur vos coûts de service client",
+      metric: "Jusqu'à 80% d'économies",
       color: "from-green-500 to-green-600"
     },
     {
       icon: Users,
-      title: t('callAnswerer.promise.promises.scale.title'),
-      description: t('callAnswerer.promise.promises.scale.description'),
-      metric: t('callAnswerer.promise.promises.scale.metric'),
+      title: "Montée en Charge",
+      description: "Gérez des milliers d'appels simultanément sans effort",
+      metric: "Appels illimités",
       color: "from-purple-500 to-purple-600"
     },
     {
       icon: TrendingUp,
-      title: t('callAnswerer.promise.promises.bookings.title'),
-      description: t('callAnswerer.promise.promises.bookings.description'),
-      metric: t('callAnswerer.promise.promises.bookings.metric'),
+      title: "Plus de Réservations",
+      description: "Augmentez vos conversions grâce à une disponibilité constante",
+      metric: "+40% de réservations",
       color: "from-aura-500 to-aura-600"
     },
     {
       icon: Phone,
-      title: t('callAnswerer.promise.promises.quality.title'),
-      description: t('callAnswerer.promise.promises.quality.description'),
-      metric: t('callAnswerer.promise.promises.quality.metric'),
+      title: "Qualité Professionnelle",
+      description: "Une voix naturelle et des réponses adaptées à votre entreprise",
+      metric: "100% professionnel",
       color: "from-indigo-500 to-indigo-600"
     },
     {
       icon: Shield,
-      title: t('callAnswerer.promise.promises.security.title'),
-      description: t('callAnswerer.promise.promises.security.description'),
-      metric: t('callAnswerer.promise.promises.security.metric'),
+      title: "Sécurité Garantie",
+      description: "Vos données sont protégées avec un chiffrement de niveau entreprise",
+      metric: "Sécurité maximale",
       color: "from-red-500 to-red-600"
     }
   ];
@@ -75,7 +73,7 @@ const CallAnswererPromise = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Shield className="w-4 h-4 mr-2" />
-            {t('callAnswerer.promise.badge')}
+            Garantie de Qualité
           </motion.div>
           <motion.h2 
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
@@ -85,7 +83,7 @@ const CallAnswererPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('callAnswerer.promise.title')}
+            Notre Promesse
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -93,7 +91,7 @@ const CallAnswererPromise = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('callAnswerer.promise.titleHighlight')}
+              Excellence Garantie
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -103,7 +101,7 @@ const CallAnswererPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('callAnswerer.promise.subtitle')}
+            Nous nous engageons à vous fournir un service d'exception avec des résultats mesurables et une satisfaction client garantie.
           </motion.p>
         </motion.div>
 
@@ -205,7 +203,7 @@ const CallAnswererPromise = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                {t('callAnswerer.promise.cta.title')}
+                Prêt à Transformer Votre Service Client ?
               </motion.h3>
               <motion.p 
                 className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"
@@ -214,7 +212,7 @@ const CallAnswererPromise = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                {t('callAnswerer.promise.cta.subtitle')}
+                Rejoignez des milliers d'entreprises qui font confiance à notre assistant IA pour améliorer leur service client.
               </motion.p>
               <motion.button 
                 className="bg-white text-aura-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -225,7 +223,7 @@ const CallAnswererPromise = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t('callAnswerer.promise.cta.button')}
+                Commencer Maintenant
               </motion.button>
             </div>
           </motion.div>

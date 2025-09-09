@@ -2,7 +2,6 @@ import React from "react";
 import { Store, Building2, Heart, GraduationCap, Car, Home, Briefcase, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-
 const CallAnswererWhoItsFor = () => {
   const navigate = useNavigate();
 
@@ -93,23 +92,23 @@ const CallAnswererWhoItsFor = () => {
 
   const painPoints = [
     {
-      problem: "Missing important calls?",
-      solution: "Our AI answers every call professionally, 24/7",
+      problem: "Appels manqués qui font perdre des clients",
+      solution: "Répondeur automatique 24/7 qui capture chaque opportunité",
       icon: "📞"
     },
     {
-      problem: "High receptionist costs?",
-      solution: "Save 70% on staffing with AI call answering",
+      problem: "Coûts élevés de personnel de réception",
+      solution: "Solution automatisée qui réduit vos coûts opérationnels",
       icon: "💰"
     },
     {
-      problem: "Inconsistent call handling?",
-      solution: "Perfect, professional service every single time",
+      problem: "Service client incohérent en dehors des heures",
+      solution: "Réponses professionnelles et cohérentes 24h/24",
       icon: "⭐"
     },
     {
-      problem: "Lost business opportunities?",
-      solution: "Convert more calls into appointments and sales",
+      problem: "Difficulté à gérer les pics d'appels",
+      solution: "Capacité illimitée pour gérer tous vos appels simultanément",
       icon: "📈"
     }
   ];
@@ -139,7 +138,7 @@ const CallAnswererWhoItsFor = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Users className="w-4 h-4 mr-2" />
-            Perfect For Your Business
+            Pour Qui ?
           </motion.div>
           <motion.h2 
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
@@ -149,7 +148,7 @@ const CallAnswererWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Who Benefits from
+            Qui Peut Bénéficier
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -157,7 +156,7 @@ const CallAnswererWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              AI Call Answering?
+              de Notre Répondeur Automatique
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -167,34 +166,49 @@ const CallAnswererWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            From small businesses to large enterprises, across every industry - discover how AI call answering 
-            transforms customer service and drives business growth.
+            Notre solution de répondeur automatique s'adapte à tous types d'entreprises, des petites entreprises aux grandes corporations, pour ne jamais manquer un appel important.
           </motion.p>
         </motion.div>
 
         {/* Pain Points */}
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24"
+          className="mb-24"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {painPoints.map((point, index) => (
-            <motion.div 
-              key={index}
-              className="text-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="text-4xl mb-4">{point.icon}</div>
-              <h3 className="font-semibold text-gray-900 mb-2">{point.problem}</h3>
-              <p className="text-sm text-aura-600 font-medium">{point.solution}</p>
-            </motion.div>
-          ))}
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Problèmes Courants Que Nous Résolvons
+            </h3>
+            <p className="text-lg text-gray-600">
+              Identifiez-vous dans l'une de ces situations ? Nous avons la solution.
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {painPoints.map((point, index) => (
+              <motion.div 
+                key={index}
+                className="text-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{point.icon}</div>
+                <h3 className="font-semibold text-gray-900 mb-2">{point.problem}</h3>
+                <p className="text-sm text-aura-600 font-medium">{point.solution}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Industries */}
@@ -212,7 +226,7 @@ const CallAnswererWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Industries We Serve
+            Secteurs d'Activité Idéaux
           </motion.h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -279,7 +293,7 @@ const CallAnswererWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Perfect for Every Business Size
+            Adapté à Toutes les Tailles d'Entreprise
           </motion.h3>
           
           <div className="grid lg:grid-cols-3 gap-8">
@@ -365,7 +379,7 @@ const CallAnswererWhoItsFor = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Ready to Transform Your Call Handling?
+                Prêt à Transformer Votre Service Client ?
               </motion.h3>
               <motion.p 
                 className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"
@@ -374,7 +388,7 @@ const CallAnswererWhoItsFor = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                Join thousands of businesses that never miss a call. Get professional AI call answering tailored to your industry.
+                Rejoignez des centaines d'entreprises qui font confiance à notre solution de répondeur automatique pour ne jamais manquer un appel important.
               </motion.p>
               <motion.button 
                 onClick={handleContactClick}
@@ -386,7 +400,7 @@ const CallAnswererWhoItsFor = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Get Started Today
+                Commencer Maintenant
               </motion.button>
             </div>
           </motion.div>

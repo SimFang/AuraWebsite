@@ -2,11 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Code } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from '../contexts/LocaleContext';
-
 const WebDevelopmentCTA = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=web-development');
@@ -14,7 +11,7 @@ const WebDevelopmentCTA = () => {
 
   return (
     <motion.section 
-      className="py-24 bg-gradient-to-br from-gray-900 via-aura-900 to-blue-900 text-white relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 via-aura-900 to-blue-900 text-white relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -55,40 +52,40 @@ const WebDevelopmentCTA = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.div 
-            className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-aura-500 to-blue-600 text-white mb-8"
+            className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r from-aura-500 to-blue-600 text-white mb-6 sm:mb-8"
             initial={{ scale: 0, rotate: -180 }}
             whileInView={{ scale: 1, rotate: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5, type: "spring", stiffness: 200 }}
             whileHover={{ scale: 1.1, rotate: 5 }}
           >
-            <Code className="w-10 h-10" />
+            <Code className="w-8 h-8 sm:w-10 sm:h-10" />
           </motion.div>
           
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold mb-8" 
+            className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8" 
             style={{ fontFamily: 'Brockmann, sans-serif' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            {t('webDevelopment.cta.title')}
+            Prêt à Transformer Votre Présence en Ligne ?
           </motion.h2>
           
           <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            {t('webDevelopment.cta.subtitle')}
+            Rejoignez plus de 500 entreprises qui nous font confiance pour leur développement web. Obtenez un devis gratuit en moins de 24h.
           </motion.p>
           
           <motion.button 
             onClick={handleContactClick}
-            className="bg-gradient-to-r from-aura-500 to-blue-600 text-white px-10 py-5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center mx-auto"
+            className="bg-gradient-to-r from-aura-500 to-purple-600 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center mx-auto text-sm sm:text-base"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -96,7 +93,7 @@ const WebDevelopmentCTA = () => {
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
-            {t('webDevelopment.cta.button')}
+            Démarrer Mon Projet
             <ArrowRight className="w-5 h-5 ml-2" />
           </motion.button>
         </motion.div>

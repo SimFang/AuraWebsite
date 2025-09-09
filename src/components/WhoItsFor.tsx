@@ -27,28 +27,28 @@ const WhoItsFor = () => {
   const targets = [
     {
       icon: <Briefcase className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.targets.0.title"),
-      description: t("whoItsFor.targets.0.description")
+      title: t("whoItsFor.industries.0.title"),
+      description: t("whoItsFor.industries.0.description")
     },
     {
       icon: <Rocket className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.targets.1.title"),
-      description: t("whoItsFor.targets.1.description")
+      title: t("whoItsFor.industries.1.title"),
+      description: t("whoItsFor.industries.1.description")
     },
     {
       icon: <Pen className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.targets.2.title"),
-      description: t("whoItsFor.targets.2.description")
+      title: t("whoItsFor.industries.2.title"),
+      description: t("whoItsFor.industries.2.description")
     },
     {
       icon: <Users className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.targets.3.title"),
-      description: t("whoItsFor.targets.3.description")
+      title: t("whoItsFor.industries.3.title"),
+      description: t("whoItsFor.industries.3.description")
     },
     {
       icon: <Clock className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.targets.4.title"),
-      description: t("whoItsFor.targets.4.description")
+      title: t("whoItsFor.industries.4.title"),
+      description: t("whoItsFor.industries.4.description")
     }
   ];
   

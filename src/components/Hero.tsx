@@ -81,7 +81,7 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover min-h-[75vh]" 
+      className="overflow-hidden relative bg-cover min-h-[100vh]" 
       id="hero" 
       style={{
         backgroundImage: 'url("/Header-background.webp")',
@@ -111,7 +111,9 @@ const Hero = () => {
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              {t("hero.title")}
+              <span className="block text-blue-600">Solutions</span>
+              <span className="block text-purple-600">innovantes</span>
+              <span className="block text-aura-600">pour votre entreprise</span>
             </h1>
             
             <p 

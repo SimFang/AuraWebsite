@@ -1,51 +1,49 @@
 import React from "react";
 import { Zap, TrendingUp, Shield, Smartphone, Search, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { useLocale } from '@/contexts/LocaleContext';
 
 const WebDevelopmentPromise = () => {
-  const { t } = useLocale();
   const promises = [
     {
       icon: Zap,
-      title: t('webDevelopment.promise.promises.0.title'),
-      description: t('webDevelopment.promise.promises.0.description'),
-      metric: t('webDevelopment.promise.promises.0.metric'),
+      title: "Performance Exceptionnelle",
+      description: "Sites ultra-rapides optimisés pour la conversion et l'expérience utilisateur",
+      metric: "< 2s de chargement",
       color: "from-yellow-500 to-orange-600"
     },
     {
       icon: Smartphone,
-      title: t('webDevelopment.promise.promises.1.title'),
-      description: t('webDevelopment.promise.promises.1.description'),
-      metric: t('webDevelopment.promise.promises.1.metric'),
+      title: "Design Responsive",
+      description: "Interface parfaitement adaptée à tous les appareils et tailles d'écran",
+      metric: "100% Mobile-First",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Search,
-      title: t('webDevelopment.promise.promises.2.title'),
-      description: t('webDevelopment.promise.promises.2.description'),
-      metric: t('webDevelopment.promise.promises.2.metric'),
+      title: "Référencement Optimisé",
+      description: "Visibilité maximale sur les moteurs de recherche dès le lancement",
+      metric: "Top 10 Google",
       color: "from-green-500 to-green-600"
     },
     {
       icon: TrendingUp,
-      title: t('webDevelopment.promise.promises.3.title'),
-      description: t('webDevelopment.promise.promises.3.description'),
-      metric: t('webDevelopment.promise.promises.3.metric'),
+      title: "Croissance Mesurable",
+      description: "Augmentation significative du trafic et des conversions",
+      metric: "+150% de trafic",
       color: "from-aura-500 to-aura-600"
     },
     {
       icon: Shield,
-      title: t('webDevelopment.promise.promises.4.title'),
-      description: t('webDevelopment.promise.promises.4.description'),
-      metric: t('webDevelopment.promise.promises.4.metric'),
+      title: "Sécurité Renforcée",
+      description: "Protection complète contre les menaces et vulnérabilités",
+      metric: "SSL + Firewall",
       color: "from-red-500 to-red-600"
     },
     {
       icon: Users,
-      title: t('webDevelopment.promise.promises.5.title'),
-      description: t('webDevelopment.promise.promises.5.description'),
-      metric: t('webDevelopment.promise.promises.5.metric'),
+      title: "Support Dédié",
+      description: "Équipe disponible pour vous accompagner dans votre succès",
+      metric: "24/7 Support",
       color: "from-purple-500 to-purple-600"
     }
   ];
@@ -75,7 +73,7 @@ const WebDevelopmentPromise = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Shield className="w-4 h-4 mr-2" />
-            {t('webDevelopment.promise.badge')}
+            Nos Engagements
           </motion.div>
           <motion.h2 
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8" 
@@ -85,7 +83,7 @@ const WebDevelopmentPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('webDevelopment.promise.title')}
+            Nos Promesses
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -93,7 +91,7 @@ const WebDevelopmentPromise = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('webDevelopment.promise.titleHighlight')}
+              Concrètes
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -103,7 +101,7 @@ const WebDevelopmentPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('webDevelopment.promise.subtitle')}
+            Nous nous engageons à livrer des résultats mesurables qui transforment votre présence en ligne et stimulent votre croissance.
           </motion.p>
         </motion.div>
 
@@ -205,7 +203,7 @@ const WebDevelopmentPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {t('webDevelopment.promise.guarantee.title')}
+            Garantie Satisfaction 30 Jours
           </motion.h3>
           <motion.p 
             className="text-lg text-gray-600 max-w-2xl mx-auto"
@@ -214,7 +212,7 @@ const WebDevelopmentPromise = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            {t('webDevelopment.promise.guarantee.description')}
+            Si vous n'êtes pas entièrement satisfait de votre site web, nous vous remboursons intégralement sous 30 jours.
           </motion.p>
         </motion.div>
       </div>

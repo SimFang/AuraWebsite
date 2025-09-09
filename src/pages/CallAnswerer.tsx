@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import CallAnswererHero from "@/components/CallAnswererHero";
-import CallAnswererHowItWorks from "@/components/CallAnswererHowItWorks";
+import CallAnswererTestimonials from "@/components/CallAnswererTestimonials";
 import CallAnswererPromise from "@/components/CallAnswererPromise";
+import CallAnswererCTA from "@/components/CallAnswererCTA";
+import CallAnswererHowItWorks from "@/components/CallAnswererHowItWorks";
 import CallAnswererWhoItsFor from "@/components/CallAnswererWhoItsFor";
 import CallAnswererPricing from "@/components/CallAnswererPricing";
-import CallAnswererTestimonials from "@/components/CallAnswererTestimonials";
-import CallAnswererCTA from "@/components/CallAnswererCTA";
 import Footer from "@/components/Footer";
 
 const CallAnswerer = () => {
@@ -15,11 +15,12 @@ const CallAnswerer = () => {
       <Navbar />
       <main className="space-y-4 sm:space-y-8">
         <CallAnswererHero />
-        <CallAnswererHowItWorks />
+        <CallAnswererTestimonials />
         <CallAnswererPromise />
+        <CallAnswererCTA />
+        <CallAnswererHowItWorks />
         <CallAnswererWhoItsFor />
         <CallAnswererPricing />
-        <CallAnswererTestimonials />
         <CallAnswererCTA />
       </main>
       <Footer />

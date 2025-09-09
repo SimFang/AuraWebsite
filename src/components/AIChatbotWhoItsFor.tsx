@@ -2,11 +2,8 @@ import React from "react";
 import { Store, Building2, Heart, GraduationCap, Car, Home, Briefcase, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useLocale } from "@/contexts/LocaleContext";
-
 const AIChatbotWhoItsFor = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
 
   const handleContactClick = () => {
     navigate('/contact?service=ai-chatbot');
@@ -14,13 +11,13 @@ const AIChatbotWhoItsFor = () => {
   const industries = [
     {
       icon: Store,
-      title: t('aiChatbot.whoItsFor.industries.ecommerce.title'),
-      description: t('aiChatbot.whoItsFor.industries.ecommerce.description'),
+      title: "E-commerce & Retail",
+      description: "Améliorez l'expérience client avec un support instantané 24/7",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.ecommerce.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.ecommerce.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.ecommerce.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.ecommerce.useCases.3')
+        "Support produit en temps réel",
+        "Suivi des commandes automatisé",
+        "Recommandations personnalisées",
+        "Gestion des retours simplifiée"
       ],
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
@@ -28,13 +25,13 @@ const AIChatbotWhoItsFor = () => {
     },
     {
       icon: Heart,
-      title: t('aiChatbot.whoItsFor.industries.healthcare.title'),
-      description: t('aiChatbot.whoItsFor.industries.healthcare.description'),
+      title: "Santé & Bien-être",
+      description: "Fournissez des informations médicales fiables et un support patient",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.healthcare.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.healthcare.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.healthcare.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.healthcare.useCases.3')
+        "Prise de rendez-vous automatisée",
+        "Informations sur les symptômes",
+        "Rappels de médicaments",
+        "Support post-consultation"
       ],
       color: "from-red-500 to-red-600",
       bgColor: "bg-red-50",
@@ -42,13 +39,13 @@ const AIChatbotWhoItsFor = () => {
     },
     {
       icon: Building2,
-      title: t('aiChatbot.whoItsFor.industries.financial.title'),
-      description: t('aiChatbot.whoItsFor.industries.financial.description'),
+      title: "Services Financiers",
+      description: "Automatisez les demandes clients et améliorez la satisfaction",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.financial.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.financial.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.financial.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.financial.useCases.3')
+        "Informations sur les comptes",
+        "Demandes de prêt pré-qualifiées",
+        "Support pour les transactions",
+        "Conseils financiers de base"
       ],
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
@@ -56,13 +53,13 @@ const AIChatbotWhoItsFor = () => {
     },
     {
       icon: GraduationCap,
-      title: t('aiChatbot.whoItsFor.industries.education.title'),
-      description: t('aiChatbot.whoItsFor.industries.education.description'),
+      title: "Éducation & Formation",
+      description: "Supportez étudiants et parents avec des réponses instantanées",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.education.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.education.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.education.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.education.useCases.3')
+        "Informations sur les cours",
+        "Assistance aux devoirs",
+        "Processus d'inscription",
+        "Support technique e-learning"
       ],
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
@@ -70,13 +67,13 @@ const AIChatbotWhoItsFor = () => {
     },
     {
       icon: Car,
-      title: t('aiChatbot.whoItsFor.industries.automotive.title'),
-      description: t('aiChatbot.whoItsFor.industries.automotive.description'),
+      title: "Automobile & Transport",
+      description: "Améliorez l'expérience client dans le secteur automobile",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.automotive.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.automotive.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.automotive.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.automotive.useCases.3')
+        "Informations sur les véhicules",
+        "Prise de rendez-vous service",
+        "Support après-vente",
+        "Devis et financements"
       ],
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
@@ -84,13 +81,13 @@ const AIChatbotWhoItsFor = () => {
     },
     {
       icon: Home,
-      title: t('aiChatbot.whoItsFor.industries.realEstate.title'),
-      description: t('aiChatbot.whoItsFor.industries.realEstate.description'),
+      title: "Immobilier & Construction",
+      description: "Automatisez les demandes et qualifiez les prospects",
       useCases: [
-        t('aiChatbot.whoItsFor.industries.realEstate.useCases.0'),
-        t('aiChatbot.whoItsFor.industries.realEstate.useCases.1'),
-        t('aiChatbot.whoItsFor.industries.realEstate.useCases.2'),
-        t('aiChatbot.whoItsFor.industries.realEstate.useCases.3')
+        "Recherche de propriétés",
+        "Planification de visites",
+        "Évaluation de biens",
+        "Informations de quartier"
       ],
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
@@ -100,37 +97,37 @@ const AIChatbotWhoItsFor = () => {
 
   const businessSizes = [
     {
-      title: t('aiChatbot.whoItsFor.businessSizes.small.title'),
-      description: t('aiChatbot.whoItsFor.businessSizes.small.description'),
+      title: "Petites Entreprises",
+      description: "Solutions abordables pour les startups et PME qui veulent automatiser leur service client sans gros investissement.",
       features: [
-        t('aiChatbot.whoItsFor.businessSizes.small.features.0'),
-        t('aiChatbot.whoItsFor.businessSizes.small.features.1'),
-        t('aiChatbot.whoItsFor.businessSizes.small.features.2'),
-        t('aiChatbot.whoItsFor.businessSizes.small.features.3')
+        "Support client 24/7 automatisé",
+        "Réduction des coûts opérationnels",
+        "Amélioration de la satisfaction client",
+        "Intégration facile avec vos outils existants"
       ],
       icon: Users,
       gradient: "from-aura-500 to-purple-600"
     },
     {
-      title: t('aiChatbot.whoItsFor.businessSizes.medium.title'),
-      description: t('aiChatbot.whoItsFor.businessSizes.medium.description'),
+      title: "Entreprises Moyennes",
+      description: "Chatbots avancés pour les entreprises en croissance qui ont besoin de gérer un volume important de demandes clients.",
       features: [
-        t('aiChatbot.whoItsFor.businessSizes.medium.features.0'),
-        t('aiChatbot.whoItsFor.businessSizes.medium.features.1'),
-        t('aiChatbot.whoItsFor.businessSizes.medium.features.2'),
-        t('aiChatbot.whoItsFor.businessSizes.medium.features.3')
+        "Gestion multi-canal (web, mobile, réseaux sociaux)",
+        "Analytics et rapports détaillés",
+        "Personnalisation avancée des réponses",
+        "Intégration CRM et outils métier"
       ],
       icon: Briefcase,
       gradient: "from-blue-500 to-cyan-600"
     },
     {
-      title: t('aiChatbot.whoItsFor.businessSizes.large.title'),
-      description: t('aiChatbot.whoItsFor.businessSizes.large.description'),
+      title: "Grandes Entreprises",
+      description: "Solutions enterprise avec IA avancée pour les corporations qui gèrent des milliers d'interactions quotidiennes.",
       features: [
-        t('aiChatbot.whoItsFor.businessSizes.large.features.0'),
-        t('aiChatbot.whoItsFor.businessSizes.large.features.1'),
-        t('aiChatbot.whoItsFor.businessSizes.large.features.2'),
-        t('aiChatbot.whoItsFor.businessSizes.large.features.3')
+        "IA conversationnelle de pointe",
+        "Scalabilité illimitée",
+        "Sécurité et conformité enterprise",
+        "Support dédié et formation équipe"
       ],
       icon: Building2,
       gradient: "from-green-500 to-teal-600"
@@ -139,33 +136,33 @@ const AIChatbotWhoItsFor = () => {
 
   const painPoints = [
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.overwhelmed.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.overwhelmed.solution'),
+      problem: "Votre équipe est submergée par les demandes clients répétitives",
+      solution: "Notre chatbot IA gère automatiquement 80% des questions courantes, libérant votre équipe pour les tâches à forte valeur ajoutée",
       icon: "📞"
     },
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.costs.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.costs.solution'),
+      problem: "Les coûts de support client explosent avec la croissance",
+      solution: "Réduisez vos coûts de support de 60% tout en améliorant la satisfaction client avec des réponses instantanées 24/7",
       icon: "💰"
     },
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.waiting.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.waiting.solution'),
+      problem: "Vos clients attendent trop longtemps pour obtenir des réponses",
+      solution: "Réponses instantanées à toute heure, réduisant le temps d'attente de plusieurs heures à quelques secondes",
       icon: "⏰"
     },
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.inconsistent.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.inconsistent.solution'),
+      problem: "La qualité du service varie selon l'agent disponible",
+      solution: "Garantissez une expérience client cohérente et professionnelle avec des réponses standardisées et personnalisées",
       icon: "✅"
     },
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.missingSales.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.missingSales.solution'),
+      problem: "Vous perdez des ventes car personne ne répond aux prospects",
+      solution: "Capturez et qualifiez automatiquement chaque lead, même en dehors des heures d'ouverture",
       icon: "🎯"
     },
     {
-      problem: t('aiChatbot.whoItsFor.painPoints.scaling.problem'),
-      solution: t('aiChatbot.whoItsFor.painPoints.scaling.solution'),
+      problem: "Difficile de faire évoluer votre support avec votre croissance",
+      solution: "Scalabilité illimitée : gérez 1000x plus de conversations sans embaucher proportionnellement",
       icon: "📈"
     }
   ];
@@ -205,7 +202,7 @@ const AIChatbotWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            {t('aiChatbot.whoItsFor.title')}
+            Qui Peut Bénéficier de
             <motion.span 
               className="block text-transparent bg-clip-text bg-gradient-to-r from-aura-600 to-purple-600"
               initial={{ opacity: 0, x: -30 }}
@@ -213,7 +210,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              {t('aiChatbot.whoItsFor.titleHighlight')}
+              Nos Chatbots IA ?
             </motion.span>
           </motion.h2>
           <motion.p 
@@ -223,7 +220,7 @@ const AIChatbotWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            {t('aiChatbot.whoItsFor.subtitle')}
+            Découvrez comment notre technologie de chatbot IA peut transformer votre service client, réduire vos coûts et améliorer l'expérience de vos clients, quelle que soit la taille de votre entreprise.
           </motion.p>
         </motion.div>
 
@@ -250,7 +247,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {t('aiChatbot.whoItsFor.painPointsTitle')}
+              Problèmes Que Nous Résolvons
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-600"
@@ -259,7 +256,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('aiChatbot.whoItsFor.painPointsSubtitle')}
+              Identifiez-vous à l'un de ces défis ? Notre chatbot IA est la solution.
             </motion.p>
           </motion.div>
           
@@ -335,7 +332,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {t('aiChatbot.whoItsFor.industriesTitle')}
+              Secteurs d'Activité
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-600"
@@ -344,7 +341,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('aiChatbot.whoItsFor.industriesSubtitle')}
+              Nos chatbots IA s'adaptent parfaitement à votre secteur d'activité avec des solutions personnalisées.
             </motion.p>
           </motion.div>
           
@@ -453,7 +450,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {t('aiChatbot.whoItsFor.businessSizesTitle')}
+              Adapté à Toutes les Tailles d'Entreprise
             </motion.h3>
             <motion.p 
               className="text-lg text-gray-600"
@@ -462,7 +459,7 @@ const AIChatbotWhoItsFor = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {t('aiChatbot.whoItsFor.businessSizesSubtitle')}
+              De la startup à la multinationale, nos solutions s'adaptent à vos besoins et votre budget.
             </motion.p>
           </motion.div>
           
@@ -564,7 +561,7 @@ const AIChatbotWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {t('aiChatbot.whoItsFor.cta.title')}
+            Prêt à Transformer Votre Service Client ?
           </motion.h3>
           <motion.p 
             className="text-lg text-white/90 mb-8 max-w-2xl mx-auto"
@@ -573,7 +570,7 @@ const AIChatbotWhoItsFor = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {t('aiChatbot.whoItsFor.cta.subtitle')}
+            Rejoignez des centaines d'entreprises qui ont déjà révolutionné leur relation client avec nos chatbots IA.
           </motion.p>
           
           <motion.div 
@@ -589,7 +586,7 @@ const AIChatbotWhoItsFor = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('aiChatbot.whoItsFor.cta.primaryButton')}
+              Commencer Maintenant
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.button>
             <motion.button 
@@ -598,7 +595,7 @@ const AIChatbotWhoItsFor = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('aiChatbot.whoItsFor.cta.secondaryButton')}
+              Demander une Démo
             </motion.button>
           </motion.div>
           
@@ -617,7 +614,7 @@ const AIChatbotWhoItsFor = () => {
               transition={{ duration: 0.4, delay: 0.9 }}
             >
               <CheckCircle className="w-4 h-4 mr-2" />
-              {t('aiChatbot.whoItsFor.cta.guarantee.0')}
+              Garantie satisfait ou remboursé 30 jours
             </motion.div>
             <motion.div 
               className="flex items-center"
@@ -627,7 +624,7 @@ const AIChatbotWhoItsFor = () => {
               transition={{ duration: 0.4, delay: 1.0 }}
             >
               <CheckCircle className="w-4 h-4 mr-2" />
-              {t('aiChatbot.whoItsFor.cta.guarantee.1')}
+              Support technique inclus et formation équipe
             </motion.div>
             <motion.div 
               className="flex items-center"
@@ -637,7 +634,7 @@ const AIChatbotWhoItsFor = () => {
               transition={{ duration: 0.4, delay: 1.1 }}
             >
               <CheckCircle className="w-4 h-4 mr-2" />
-              {t('aiChatbot.whoItsFor.cta.guarantee.2')}
+              Déploiement en moins de 14 jours
             </motion.div>
           </motion.div>
         </motion.div>

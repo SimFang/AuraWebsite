@@ -1,29 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "@/components/Navbar";
 import AIChatbotHero from "@/components/AIChatbotHero";
-import AIChatbotHowItWorks from "@/components/AIChatbotHowItWorks";
+import AIChatbotTestimonials from "@/components/AIChatbotTestimonials";
 import AIChatbotPromise from "@/components/AIChatbotPromise";
+import AIChatbotCTA from "@/components/AIChatbotCTA";
+import AIChatbotHowItWorks from "@/components/AIChatbotHowItWorks";
 import AIChatbotWhoItsFor from "@/components/AIChatbotWhoItsFor";
 import AIChatbotPricing from "@/components/AIChatbotPricing";
-import AIChatbotTestimonials from "@/components/AIChatbotTestimonials";
-import AIChatbotCTA from "@/components/AIChatbotCTA";
 import Footer from "@/components/Footer";
 
 const AIChatbot = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main>
+      <main className="space-y-4 sm:space-y-8">
         <AIChatbotHero />
-        <AIChatbotHowItWorks />
+        <AIChatbotTestimonials />
         <AIChatbotPromise />
+        <AIChatbotCTA />
+        <AIChatbotHowItWorks />
         <AIChatbotWhoItsFor />
         <AIChatbotPricing />
-        <AIChatbotTestimonials />
         <AIChatbotCTA />
       </main>
       <Footer />
