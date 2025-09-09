@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ServicesSection from "@/components/ServicesSection";
 import Pricing from "@/components/Pricing";
 import ProcessSteps from "@/components/ProcessSteps";
 import ContactForm from "@/components/ContactForm";
@@ -61,6 +62,7 @@ const Index = () => {
       <Navbar />
       <main className="space-y-4 sm:space-y-8">
         <Hero />
+        <ServicesSection />
         <Pricing />
         <ProcessSteps />
         <SpecsSection />

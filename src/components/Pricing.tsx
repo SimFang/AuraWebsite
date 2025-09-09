@@ -9,7 +9,8 @@ const PricingCard = ({
   description, 
   features, 
   isPrimary = false,
-  getStartedText
+  getStartedText,
+  mostPopularText
 }: { 
   title: string; 
   price: string; 
@@ -17,12 +18,13 @@ const PricingCard = ({
   features: string[]; 
   isPrimary?: boolean;
   getStartedText: string;
+  mostPopularText: string;
 }) => {
   return (
     <div className={`rounded-2xl p-6 sm:p-8 ${isPrimary ? 'bg-aura-50 border-2 border-aura-500 shadow-lg relative' : 'bg-white border border-gray-200'}`}>
       {isPrimary && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-aura-500 text-white text-xs font-bold px-4 py-1 rounded-full">
-          Most Popular
+          {mostPopularText}
         </div>
       )}
       
@@ -34,10 +36,10 @@ const PricingCard = ({
       <p className="text-gray-600 mb-6">{description}</p>
       
       <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start">
-            <Check className="w-5 h-5 text-aura-500 mr-2 flex-shrink-0 mt-0.5" />
-            <span className="text-gray-700 text-sm">{feature}</span>
+        {features.map((feature: string, index: number) => (
+          <li key={index} className="flex items-center gap-3">
+            <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+            <span className="text-sm text-gray-600">{feature}</span>
           </li>
         ))}
       </ul>
@@ -77,17 +79,19 @@ const Pricing = () => {
             title={t("pricing.basicWebsite.title")}
             price={t("pricing.basicWebsite.price")}
             description={t("pricing.basicWebsite.description")}
-            features={t("pricing.basicWebsite.features").map(feature => feature)}
+            features={t("pricing.basicWebsite.features") as unknown as string[]}
             isPrimary={true}
             getStartedText={t("pricing.getStarted")}
+            mostPopularText={t("pricing.mostPopular")}
           />
           
           <PricingCard
             title={t("pricing.customProject.title")}
             price={t("pricing.customProject.price")}
             description={t("pricing.customProject.description")}
-            features={t("pricing.customProject.features").map(feature => feature)}
+            features={t("pricing.customProject.features") as unknown as string[]}
             getStartedText={t("pricing.getStarted")}
+            mostPopularText={t("pricing.mostPopular")}
           />
         </div>
         

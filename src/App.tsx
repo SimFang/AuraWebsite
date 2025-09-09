@@ -6,6 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import Index from "./pages/Index";
+import WebDevelopment from "./pages/WebDevelopment";
+import AIChatbot from "./pages/AIChatbot";
+import CallAnswerer from "./pages/CallAnswerer";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,7 +22,11 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<WebDevelopment />} />
+            <Route path="/web-development" element={<WebDevelopment />} />
+            <Route path="/ai-chatbot" element={<AIChatbot />} />
+            <Route path="/call-answerer" element={<CallAnswerer />} />
+            <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
