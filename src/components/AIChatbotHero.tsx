@@ -31,7 +31,7 @@ const AIChatbotHero = () => {
 
             {/* Headline */}
             <motion.h1 
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-gray-900 mb-8" 
+              className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-gray-900 mb-6 sm:mb-8" 
               style={{fontFamily: 'Brockmann, sans-serif'}}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const AIChatbotHero = () => {
 
             {/* Subheadline */}
             <motion.p 
-              className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -60,7 +60,7 @@ const AIChatbotHero = () => {
 
             {/* Features */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 mb-10 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-10 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
@@ -74,13 +74,13 @@ const AIChatbotHero = () => {
                 return (
                   <motion.div 
                     key={index}
-                    className="flex items-center text-gray-700"
+                    className="flex items-center text-gray-700 text-sm sm:text-base"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <IconComponent className="w-5 h-5 text-aura-600 mr-2" />
+                    <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-aura-600 mr-2 flex-shrink-0" />
                     <span>{feature.text}</span>
                   </motion.div>
                 );
@@ -88,11 +88,11 @@ const AIChatbotHero = () => {
             </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start px-4 sm:px-0">
               <Button 
                 size="lg" 
                 onClick={handleContactClick}
-                className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-10 py-5 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
               >
                 Créer Mon Chatbot
               </Button>
@@ -100,29 +100,35 @@ const AIChatbotHero = () => {
                 variant="outline" 
                 size="lg"
                 onClick={handleContactClick}
-                className="border-2 border-aura-600 text-aura-600 hover:bg-aura-50 px-10 py-5 text-lg font-semibold rounded-xl transition-all duration-300"
+                className="border-2 border-aura-600 text-aura-600 hover:bg-aura-50 px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
               >
                 Voir une Démo
               </Button>
             </div>
 
             {/* Trust Indicators */}
-            <div className="mt-16 pt-10 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-4">Ils nous font confiance</p>
-              <div className="flex items-center justify-center lg:justify-start space-x-8 opacity-60">
-                <div className="text-2xl font-bold text-gray-400">500+</div>
-                <div className="text-sm text-gray-500">Chatbots Actifs</div>
-                <div className="text-2xl font-bold text-gray-400">99.9%</div>
-                <div className="text-sm text-gray-500">Disponibilité</div>
-                <div className="text-2xl font-bold text-gray-400">24/7</div>
-                <div className="text-sm text-gray-500">Support</div>
+            <div className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-gray-200">
+              <p className="text-sm text-gray-500 mb-4 text-center lg:text-left">Ils nous font confiance</p>
+              <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-center lg:justify-start sm:space-x-8 opacity-60">
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl font-bold text-gray-400">500+</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Chatbots Actifs</div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl font-bold text-gray-400">99.9%</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Disponibilité</div>
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="text-xl sm:text-2xl font-bold text-gray-400">24/7</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Support</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Visual */}
           <motion.div 
-            className="relative"
+            className="relative mt-12 lg:mt-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -130,7 +136,7 @@ const AIChatbotHero = () => {
             <div className="relative z-10">
               {/* Main Chatbot Interface */}
               <motion.div 
-                className="bg-white rounded-2xl shadow-2xl p-6 max-w-md mx-auto"
+                className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 max-w-sm sm:max-w-md mx-auto"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
