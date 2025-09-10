@@ -4,11 +4,9 @@ import { ArrowLeft, Construction, Wrench } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useLocale } from "@/contexts/LocaleContext";
 
 const Portfolio = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
@@ -45,7 +43,7 @@ const Portfolio = () => {
             whileHover={{ x: -5 }}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            {t('portfolio.backButton')}
+            Retour à l'accueil
           </motion.button>
           
           <motion.div
@@ -60,10 +58,10 @@ const Portfolio = () => {
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 1, delay: 0.2 }}
              >
-               <span className="font-extralight">{t('portfolio.title').split(' ')[0]}</span>
+               <span className="font-extralight">Nos</span>
                <br />
                <span className="font-medium bg-gradient-to-r from-aura-600 to-purple-600 bg-clip-text text-transparent">
-                 {t('portfolio.title').split(' ')[1]}
+                 Réalisations
                </span>
              </motion.h1>
             
@@ -73,7 +71,7 @@ const Portfolio = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              {t('portfolio.subtitle')}
+              Découvrez nos projets et réalisations qui témoignent de notre expertise en développement web et solutions digitales.
             </motion.p>
           </motion.div>
         </motion.div>
@@ -110,9 +108,9 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            {t('portfolio.underConstruction.title').split(' ').slice(0, 1).join(' ')} 
+            Portfolio 
             <span className="bg-gradient-to-r from-aura-600 to-purple-600 bg-clip-text text-transparent">
-              {t('portfolio.underConstruction.title').split(' ').slice(1).join(' ')}
+              en Construction
             </span>
           </motion.h2>
           
@@ -122,7 +120,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            {t('portfolio.underConstruction.description')}
+            Nous mettons actuellement à jour notre portfolio avec de nouveaux projets passionnants. Revenez bientôt pour voir nos dernières réalisations en développement web !
           </motion.p>
           
           <motion.div
@@ -132,7 +130,7 @@ const Portfolio = () => {
             transition={{ duration: 0.6, delay: 1.4 }}
           >
             <Wrench className="w-6 h-6" />
-            <span className="text-lg font-medium">{t('portfolio.underConstruction.buildingText')}</span>
+            <span className="text-lg font-medium">Construction de quelque chose d'extraordinaire...</span>
             <Wrench className="w-6 h-6" />
           </motion.div>
           
@@ -142,19 +140,19 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.6 }}
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('portfolio.underConstruction.whatToExpect.title')}</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce qui vous attend</h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">
               <div>
-                <div className="font-medium text-aura-600 mb-2">{t('portfolio.underConstruction.whatToExpect.latestProjects.title')}</div>
-                <p>{t('portfolio.underConstruction.whatToExpect.latestProjects.description')}</p>
+                <div className="font-medium text-aura-600 mb-2">Derniers Projets</div>
+                <p>Découvrez nos réalisations les plus récentes avec des technologies de pointe</p>
               </div>
               <div>
-                <div className="font-medium text-aura-600 mb-2">{t('portfolio.underConstruction.whatToExpect.caseStudies.title')}</div>
-                <p>{t('portfolio.underConstruction.whatToExpect.caseStudies.description')}</p>
+                <div className="font-medium text-aura-600 mb-2">Études de Cas</div>
+                <p>Analyses détaillées de nos projets et des résultats obtenus</p>
               </div>
               <div>
-                <div className="font-medium text-aura-600 mb-2">{t('portfolio.underConstruction.whatToExpect.designShowcase.title')}</div>
-                <p>{t('portfolio.underConstruction.whatToExpect.designShowcase.description')}</p>
+                <div className="font-medium text-aura-600 mb-2">Vitrine Design</div>
+                <p>Explorez notre approche créative et nos solutions innovantes</p>
               </div>
             </div>
           </motion.div>
