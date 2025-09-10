@@ -4,10 +4,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Mail, MessageCircle, Send, CheckCircle, MessageSquare, Users, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useLocale } from '@/contexts/LocaleContext';
 
 const Contact: React.FC = () => {
-  const { t } = useLocale();
   const [searchParams] = useSearchParams();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -19,10 +17,10 @@ const Contact: React.FC = () => {
   });
 
   const services = [
-    { value: 'webDevelopment', label: t('contact.services.webDevelopment') },
-    { value: 'aiChatbot', label: t('contact.services.aiChatbot') },
-    { value: 'callAnswerer', label: t('contact.services.callAnswerer') },
-    { value: 'other', label: t('contact.services.other') }
+    { value: 'webDevelopment', label: 'Développement Web' },
+    { value: 'aiChatbot', label: 'Chatbot IA' },
+    { value: 'callAnswerer', label: 'Répondeur Automatique' },
+    { value: 'other', label: 'Autre' }
   ];
 
   useEffect(() => {
@@ -40,13 +38,13 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent(t('contact.email.subject'));
+    const subject = encodeURIComponent('Nouvelle demande de contact - Websora');
     const body = encodeURIComponent(
-      `${t('contact.email.name')}: ${formData.name || t('contact.email.notProvided')}\n` +
-      `${t('contact.email.email')}: ${formData.email || t('contact.email.notProvided')}\n` +
-      `${t('contact.email.company')}: ${formData.company || t('contact.email.notProvided')}\n` +
-      `${t('contact.email.service')}: ${formData.service ? services.find(s => s.value === formData.service)?.label : t('contact.email.notSpecified')}\n\n` +
-      `${t('contact.email.message')}:\n${formData.message || t('contact.email.generalInquiry')}`
+      `Nom: ${formData.name || 'Non fourni'}\n` +
+      `Email: ${formData.email || 'Non fourni'}\n` +
+      `Entreprise: ${formData.company || 'Non fourni'}\n` +
+      `Service: ${formData.service ? services.find(s => s.value === formData.service)?.label : 'Non spécifié'}\n\n` +
+      `Message:\n${formData.message || 'Demande générale d\'information'}`
     );
     
     window.location.href = `mailto:contact.websora@gmail.com?subject=${subject}&body=${body}`;
@@ -84,7 +82,7 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4"
               >
-                {t('contact.success.title')}
+                Message Envoyé !
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -92,7 +90,7 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="text-lg text-gray-600 mb-8"
               >
-                {t('contact.success.message')}
+                Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
               </motion.p>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
@@ -101,7 +99,7 @@ const Contact: React.FC = () => {
                 onClick={() => setIsSubmitted(false)}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                {t('contact.success.sendAnother')}
+                Envoyer un autre message
               </motion.button>
             </motion.div>
           </div>
@@ -136,7 +134,7 @@ const Contact: React.FC = () => {
           >
             <div className="inline-flex items-center justify-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium mb-6">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-white mr-2 text-xs font-bold">04</span>
-              <span className="text-white/80">{t('contact.header.breadcrumb')}</span>
+              <span className="text-white/80">Nous Contacter</span>
             </div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -145,10 +143,10 @@ const Contact: React.FC = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-8 tracking-tight leading-tight px-4"
               style={{fontFamily: 'Brockmann, sans-serif'}}
             >
-              <span className="font-extralight">{t('contact.header.title.part1')}</span>
+              <span className="font-extralight">Parlons de Votre</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-blue-200 via-aura-200 to-purple-200 bg-clip-text text-transparent">
-                {t('contact.header.title.part2')}
+                Projet
               </span>
             </motion.h1>
             <motion.p 
@@ -157,7 +155,7 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-12 sm:mb-16 max-w-3xl mx-auto font-light leading-relaxed px-4"
             >
-              {t('contact.header.subtitle')}
+              Prêt à transformer votre entreprise ? Contactez-nous pour discuter de votre projet et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
             </motion.p>
           </motion.div>
 
@@ -179,7 +177,7 @@ const Contact: React.FC = () => {
                     <MessageSquare className="w-5 h-5 text-white" />
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                    {t('contact.form.title')}
+                    Contactez-nous
                   </h2>
                 </motion.div>
                 
@@ -191,7 +189,7 @@ const Contact: React.FC = () => {
                       transition={{ duration: 0.5, delay: 1.2 }}
                     >
                       <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-                        {t('contact.form.fullName')} *
+                        Nom complet *
                       </label>
                       <input
                         type="text"
@@ -199,7 +197,7 @@ const Contact: React.FC = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder={t('contact.form.fullNamePlaceholder')}
+                        placeholder="Votre nom complet"
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-white/20 bg-white/10 text-white placeholder-white/60 rounded-xl focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all duration-200 backdrop-blur-sm text-sm sm:text-base"
                         required
                       />
@@ -211,7 +209,7 @@ const Contact: React.FC = () => {
                       transition={{ duration: 0.5, delay: 1.3 }}
                     >
                       <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                        {t('contact.form.emailAddress')} *
+                        Adresse email *
                       </label>
                       <input
                         type="email"
@@ -219,7 +217,7 @@ const Contact: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder={t('contact.form.emailPlaceholder')}
+                        placeholder="votre@email.com"
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-white/20 bg-white/10 text-white placeholder-white/60 rounded-xl focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all duration-200 backdrop-blur-sm text-sm sm:text-base"
                         required
                       />
@@ -232,7 +230,7 @@ const Contact: React.FC = () => {
                     transition={{ duration: 0.5, delay: 1.4 }}
                   >
                     <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                      {t('contact.form.company')}
+                      Entreprise
                     </label>
                     <input
                       type="text"
@@ -240,7 +238,7 @@ const Contact: React.FC = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      placeholder={t('contact.form.companyPlaceholder')}
+                      placeholder="Nom de votre entreprise (optionnel)"
                       className="w-full px-4 py-3 border border-white/20 bg-white/10 text-white placeholder-white/60 rounded-xl focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all duration-200 backdrop-blur-sm"
                     />
                   </motion.div>
@@ -251,7 +249,7 @@ const Contact: React.FC = () => {
                     transition={{ duration: 0.5, delay: 1.5 }}
                   >
                     <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
-                      {t('contact.form.serviceLabel')}
+                      Service
                     </label>
                     <select
                       id="service"
@@ -261,7 +259,7 @@ const Contact: React.FC = () => {
                       className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-white/20 bg-white/10 text-white focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all duration-200 backdrop-blur-sm rounded-xl text-sm sm:text-base"
                       style={{colorScheme: 'dark'}}
                     >
-                      <option value="" className="bg-slate-800 text-white">{t('contact.form.serviceSelect')}</option>
+                      <option value="" className="bg-slate-800 text-white">Sélectionnez un service</option>
                       {services.map((service) => (
                         <option key={service.value} value={service.value} className="bg-slate-800 text-white">
                           {service.label}
@@ -276,14 +274,14 @@ const Contact: React.FC = () => {
                     transition={{ duration: 0.5, delay: 1.6 }}
                   >
                     <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                      {t('contact.form.message')} *
+                      Message *
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder={t('contact.form.messagePlaceholder')}
+                      placeholder="Décrivez votre projet ou vos besoins..."
                       rows={5}
                       className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-white/20 bg-white/10 text-white placeholder-white/60 rounded-xl focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all duration-200 backdrop-blur-sm resize-none text-sm sm:text-base"
                       required
@@ -298,7 +296,7 @@ const Contact: React.FC = () => {
                     className="w-full bg-white text-slate-900 hover:bg-slate-50 disabled:bg-white/60 disabled:text-slate-500 py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-medium transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20 flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Send className="w-5 h-5" />
-                    {t('contact.form.sendMessage')}
+                    Envoyer le Message
                   </motion.button>
                 </form>
               </motion.div>
@@ -320,10 +318,10 @@ const Contact: React.FC = () => {
                       <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {t('contact.info.emailTitle')}
+                      Email Direct
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base text-slate-300 mb-3 sm:mb-4">{t('contact.info.emailDescription')}</p>
+                  <p className="text-sm sm:text-base text-slate-300 mb-3 sm:mb-4">Contactez-nous directement par email</p>
                   <a 
                     href="mailto:contact.websora@gmail.com" 
                     className="text-blue-300 hover:text-blue-200 font-semibold transition-colors duration-200"
@@ -343,10 +341,10 @@ const Contact: React.FC = () => {
                       <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {t('contact.info.responseTimeTitle')}
+                      Temps de Réponse
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base text-slate-300">{t('contact.info.responseTime')}</p>
+                  <p className="text-sm sm:text-base text-slate-300">Nous répondons généralement dans les 24 heures</p>
                 </motion.div>
 
                 <motion.div 
@@ -360,21 +358,21 @@ const Contact: React.FC = () => {
                       <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {t('contact.whyChoose.title')}
+                      Pourquoi nous choisir
                     </h3>
                   </div>
                   <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-300">
                     <li className="flex items-center gap-2">
                       <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-aura-500 flex-shrink-0" />
-                      {t('contact.whyChoose.professional')}
+                      Expertise professionnelle et approche personnalisée
                     </li>
                     <li className="flex items-center gap-2">
                       <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-aura-500 flex-shrink-0" />
-                      {t('contact.whyChoose.dedicated')}
+                      Équipe dédiée et support continu
                     </li>
                     <li className="flex items-center gap-2">
                       <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-aura-500 flex-shrink-0" />
-                      {t('contact.whyChoose.fastResponse')}
+                      Réponse rapide et communication transparente
                     </li>
                   </ul>
                 </motion.div>

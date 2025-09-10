@@ -48,26 +48,26 @@ const HowItWorks = () => {
   const stepsData = [
     {
       number: "01",
-      title: "Request Access",
-      description: "Fill out the application form to join our early access program and secure your spot in line.",
+      title: "Consultation",
+      description: "Nous analysons vos besoins et définissons ensemble les objectifs de votre projet web.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "02",
-      title: "Personalization",
-      description: "We'll work with you to customize Atlas to your specific needs and preferences.",
+      title: "Conception",
+      description: "Notre équipe crée un design sur mesure qui reflète votre identité et engage vos visiteurs.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "03",
-      title: "Integration",
-      description: "Atlas arrives at your location and is integrated into your living or working environment.",
+      title: "Développement",
+      description: "Nous développons votre site avec les dernières technologies pour une performance optimale.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "04",
-      title: "Adaptation",
-      description: "Through daily interaction, Atlas learns and adapts to your routines, preferences, and needs.",
+      title: "Lancement",
+      description: "Mise en ligne de votre site et accompagnement pour assurer son succès durable.",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -116,11 +116,11 @@ const HowItWorks = () => {
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 fade-in-stagger">
           <div className="pulse-chip mx-auto mb-4">
-            <span>Process</span>
+            <span>Processus</span>
           </div>
-          <h2 className="section-title mb-4">How Atlas Integrates Into Your Life</h2>
+          <h2 className="section-title mb-4">Comment nous créons votre site web</h2>
           <p className="section-subtitle mx-auto">
-            A seamless four-step process from request to full integration.
+            Un processus en quatre étapes pour transformer votre vision en réalité digitale.
           </p>
         </div>
         

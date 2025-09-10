@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Briefcase, Rocket, Pen, Users, Clock } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
 
 interface TargetAudienceProps {
   icon: React.ReactNode;
@@ -22,33 +21,31 @@ const TargetAudience = ({ icon, title, description }: TargetAudienceProps) => {
 };
 
 const WhoItsFor = () => {
-  const { t } = useLocale();
-
   const targets = [
     {
       icon: <Briefcase className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.industries.0.title"),
-      description: t("whoItsFor.industries.0.description")
+      title: "Entreprises établies",
+      description: "Modernisez votre présence en ligne avec des solutions web professionnelles."
     },
     {
       icon: <Rocket className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.industries.1.title"),
-      description: t("whoItsFor.industries.1.description")
+      title: "Startups",
+      description: "Lancez votre entreprise avec une plateforme web robuste et évolutive."
     },
     {
       icon: <Pen className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.industries.2.title"),
-      description: t("whoItsFor.industries.2.description")
+      title: "Créateurs de contenu",
+      description: "Présentez votre travail avec un portfolio web élégant et professionnel."
     },
     {
       icon: <Users className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.industries.3.title"),
-      description: t("whoItsFor.industries.3.description")
+      title: "Organisations",
+      description: "Connectez-vous avec votre communauté grâce à des solutions web sur mesure."
     },
     {
       icon: <Clock className="w-6 h-6 text-aura-500" />,
-      title: t("whoItsFor.industries.4.title"),
-      description: t("whoItsFor.industries.4.description")
+      title: "Projets urgents",
+      description: "Livraison rapide sans compromis sur la qualité pour vos besoins urgents."
     }
   ];
   
@@ -59,7 +56,7 @@ const WhoItsFor = () => {
           <div className="flex items-center gap-4">
             <div className="aura-chip">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-aura-500 text-white mr-2">4</span>
-              <span>{t("whoItsFor.title")}</span>
+              <span>Pour qui ?</span>
             </div>
           </div>
           <div className="flex-1 h-[1px] bg-gray-300"></div>
@@ -67,10 +64,10 @@ const WhoItsFor = () => {
         
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-4">
-            {t("whoItsFor.title")}
+            Pour qui c'est fait ?
           </h2>
           <p className="text-lg text-gray-600">
-            {t("whoItsFor.subtitle")}
+            Nos solutions s'adaptent à tous types d'entreprises et de projets, quelle que soit leur taille ou leur secteur d'activité.
           </p>
         </div>
         

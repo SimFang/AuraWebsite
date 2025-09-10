@@ -1,6 +1,5 @@
 
 import React from "react";
-import { useLocale } from "@/contexts/LocaleContext";
 
 interface TestimonialProps {
   content: string;
@@ -32,16 +31,20 @@ const TestimonialCard = ({
 };
 
 const Testimonials = () => {
-  const { t } = useLocale();
-  
-  const testimonials = t("testimonials.clients").map((client, index) => {
-    return {
-      content: client.content,
-      author: client.author,
-      role: client.role,
-      backgroundImage: `/background-section${(index % 3) + 1}.png`
-    };
-  });
+  const testimonials = [
+    {
+      content: "Aura Web a transformé notre présence en ligne. Leur équipe professionnelle a livré un site web exceptionnel qui dépasse nos attentes.",
+      author: "Marie Dubois",
+      role: "Directrice Marketing",
+      backgroundImage: "/background-section1.png"
+    },
+    {
+      content: "Service client remarquable et expertise technique impressionnante. Je recommande vivement Aura Web pour tous vos projets digitaux.",
+      author: "Pierre Martin",
+      role: "CEO, TechStart",
+      backgroundImage: "/background-section2.png"
+    }
+  ];
   
   return (
     <section className="py-16 bg-white" id="testimonials">
@@ -49,17 +52,17 @@ const Testimonials = () => {
         <div className="flex items-center gap-4 mb-8">
           <div className="aura-chip">
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-aura-500 text-white mr-2">5</span>
-            <span>{t("testimonials.whatOurClientsSay")}</span>
+            <span>Ce que disent nos clients</span>
           </div>
           <div className="flex-1 h-[1px] bg-gray-300"></div>
         </div>
         
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-4">
-            {t("testimonials.title")}
+Des clients satisfaits, notre meilleure récompense
           </h2>
           <p className="text-lg text-gray-600">
-            {t("testimonials.subtitle")}
+Découvrez les témoignages de nos clients qui nous font confiance pour leurs projets digitaux.
           </p>
         </div>
         

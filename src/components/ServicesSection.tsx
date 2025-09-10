@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocale } from "@/contexts/LocaleContext";
 import { useNavigate } from "react-router-dom";
 
 interface ServicesSectionProps {
@@ -7,7 +6,6 @@ interface ServicesSectionProps {
 }
 
 const ServicesSection = ({ activeService = "web-development" }: ServicesSectionProps) => {
-  const { t } = useLocale();
   const navigate = useNavigate();
 
   const services = [
@@ -29,8 +27,8 @@ const ServicesSection = ({ activeService = "web-development" }: ServicesSectionP
     },
     {
       id: "ai-chatbot",
-      title: t("servicesSection.aiChatbot.title"),
-      description: t("servicesSection.aiChatbot.description"),
+      title: "Chatbot IA",
+      description: "Automatisez votre service client avec des chatbots intelligents disponibles 24/7.",
       route: "/ai-chatbot",
       icon: (
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -45,8 +43,8 @@ const ServicesSection = ({ activeService = "web-development" }: ServicesSectionP
     },
     {
       id: "call-answerer",
-      title: t("servicesSection.callAnswerer.title"),
-      description: t("servicesSection.callAnswerer.description"),
+      title: "Répondeur Automatique",
+      description: "Solutions d'appels automatisées pour ne jamais manquer un client potentiel.",
       route: "/call-answerer",
       icon: (
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -66,10 +64,10 @@ const ServicesSection = ({ activeService = "web-development" }: ServicesSectionP
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-display">
-            {t("servicesSection.title")}
+            Nos Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("servicesSection.subtitle")}
+            Des solutions complètes pour transformer votre présence digitale et automatiser vos processus métier.
           </p>
         </div>
         
@@ -121,7 +119,7 @@ const ServicesSection = ({ activeService = "web-development" }: ServicesSectionP
                     : 'text-aura-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2'
                 }`}>
                   <span className="text-sm font-semibold">
-                    {isActive ? t("servicesSection.currentService") : t("servicesSection.learnMore")}
+                    {isActive ? "Service actuel" : "En savoir plus"}
                   </span>
                   {!isActive && (
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

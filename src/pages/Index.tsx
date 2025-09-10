@@ -4,13 +4,11 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Users, Clock, Shield, Globe, Zap, Star, CheckCircle, Code, Bot, Phone } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   const navigate = useNavigate();
-  const { t } = useLocale();
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
@@ -38,14 +36,14 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              <span className="font-extralight">{t('homepage.hero.headline').split('.')[0]}.</span>
+              <span className="font-extralight">Transformez votre vision.</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-aura-600 to-purple-600 bg-clip-text text-transparent">
-                {t('homepage.hero.headline').split('.').slice(1, 3).join('.').trim()}.
+                Créez l'extraordinaire.
               </span>
               <br />
               <span className="font-light text-aura-700">
-                {t('homepage.hero.headline').split('.')[3]?.trim()}.
+                Ensemble.
               </span>
             </motion.h1>
             
@@ -55,7 +53,7 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              {t('homepage.hero.subheadline')}
+              Des solutions digitales sur mesure qui propulsent votre entreprise vers de nouveaux sommets d'innovation et de performance.
             </motion.p>
             
             <motion.div 
@@ -74,7 +72,7 @@ const Index = () => {
                 }}
                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto max-w-xs sm:max-w-none"
               >
-                {t('common.learnMore')}
+                En savoir plus
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </motion.div>
@@ -97,14 +95,14 @@ const Index = () => {
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 sm:mb-8 tracking-tight px-4" style={{ fontFamily: 'Brockmann, sans-serif' }}>
-              <span className="font-extralight">{t('homepage.outcomes.title').split(' ').slice(0, 2).join(' ')}</span>
+              <span className="font-extralight">Résultats qui</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-aura-600 to-purple-600 bg-clip-text text-transparent">
-                {t('homepage.outcomes.title').split(' ').slice(2).join(' ')}
+                comptent vraiment
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed px-4">
-              {t('homepage.outcomes.subtitle')}
+              Nous créons des solutions qui génèrent un impact mesurable et durable pour votre entreprise.
             </p>
           </motion.div>
           
@@ -112,20 +110,20 @@ const Index = () => {
             {[
               {
                 icon: Users,
-                title: t('homepage.outcomes.benefit1.title'),
-                description: t('homepage.outcomes.benefit1.description'),
+                title: "Expérience Utilisateur Exceptionnelle",
+                description: "Des interfaces intuitives qui captivent vos utilisateurs et augmentent l'engagement de 300%.",
                 gradient: 'from-blue-500/10 to-indigo-500/10'
               },
               {
                 icon: Clock,
-                title: t('homepage.outcomes.benefit2.title'),
-                description: t('homepage.outcomes.benefit2.description'),
+                title: "Livraison Rapide et Fiable",
+                description: "Développement agile avec des délais respectés et une qualité irréprochable à chaque étape.",
                 gradient: 'from-indigo-500/10 to-purple-500/10'
               },
               {
                 icon: Shield,
-                title: t('homepage.outcomes.benefit3.title'),
-                description: t('homepage.outcomes.benefit3.description'),
+                title: "Sécurité et Performance",
+                description: "Solutions robustes avec sécurité renforcée et performances optimisées pour une croissance durable.",
                 gradient: 'from-purple-500/10 to-pink-500/10'
               }
             ].map((benefit, index) => {
@@ -180,14 +178,14 @@ const Index = () => {
             className="text-center mb-12 sm:mb-16 lg:mb-24"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 sm:mb-8 tracking-tight px-4" style={{ fontFamily: 'Brockmann, sans-serif' }}>
-              <span className="font-extralight">{t('homepage.services.title').split(' ').slice(0, 1).join(' ')}</span>
+              <span className="font-extralight">Nos</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-aura-600 to-purple-600 bg-clip-text text-transparent">
-                {t('homepage.services.title').split(' ').slice(1).join(' ')}
+                Services Experts
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed px-4">
-              {t('homepage.services.subtitle')}
+              Des solutions technologiques innovantes adaptées à vos besoins spécifiques.
             </p>
           </motion.div>
           
@@ -218,15 +216,15 @@ const Index = () => {
                 </motion.div>
                 
                 <h3 className="text-2xl font-medium text-gray-900 mb-4 tracking-tight">
-                  {t('homepage.services.webDevelopment.title')}
+                  Développement Web
                 </h3>
                 
                 <p className="text-slate-600 mb-6 font-light leading-relaxed">
-                  {t('homepage.services.webDevelopment.description')}
+                  Sites web modernes, applications performantes et expériences utilisateur exceptionnelles.
                 </p>
                 
                 <Button className="w-full bg-aura-600 hover:bg-aura-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:shadow-aura-600/20">
-                  {t('homepage.services.webDevelopment.cta')}
+                  Découvrir
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -258,15 +256,15 @@ const Index = () => {
                 </motion.div>
                 
                 <h3 className="text-2xl font-medium text-gray-900 mb-4 tracking-tight">
-                  {t('homepage.services.aiChatbot.title')}
+                  Chatbot IA
                 </h3>
                 
                 <p className="text-slate-600 mb-6 font-light leading-relaxed">
-                  {t('homepage.services.aiChatbot.description')}
+                  Assistants virtuels intelligents pour automatiser votre service client 24/7.
                 </p>
                 
                 <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:shadow-indigo-600/20">
-                  {t('homepage.services.aiChatbot.cta')}
+                  Explorer
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -298,15 +296,15 @@ const Index = () => {
                 </motion.div>
                 
                 <h3 className="text-2xl font-medium text-gray-900 mb-4 tracking-tight">
-                  {t('homepage.services.callAnswerer.title')}
+                  Répondeur Automatique
                 </h3>
                 
                 <p className="text-slate-600 mb-6 font-light leading-relaxed">
-                  {t('homepage.services.callAnswerer.description')}
+                  Solutions d'appels automatisées pour ne jamais manquer un client potentiel.
                 </p>
                 
                 <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group-hover:shadow-purple-600/20">
-                  {t('homepage.services.callAnswerer.cta')}
+                  Commencer
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -339,10 +337,10 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              <span className="font-extralight">{t('homepage.finalCta.headline').split(' ').slice(0, 2).join(' ')}</span>
+              <span className="font-extralight">Prêt à</span>
               <br />
               <span className="font-medium bg-gradient-to-r from-blue-200 via-aura-200 to-purple-200 bg-clip-text text-transparent">
-                {t('homepage.finalCta.headline').split(' ').slice(2).join(' ')}
+                transformer votre vision?
               </span>
             </motion.h2>
             
@@ -352,7 +350,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              {t('homepage.finalCta.subheadline')}
+              Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous aider à atteindre vos objectifs.
             </motion.p>
             
             <motion.div 
@@ -366,7 +364,7 @@ const Index = () => {
                 onClick={() => navigate('/contact')}
                 className="bg-white text-aura-900 hover:bg-aura-50 px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20 group w-full sm:w-auto max-w-xs sm:max-w-none"
               >
-{t('homepage.finalCta.primaryButton')}
+Commencer maintenant
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -376,7 +374,7 @@ const Index = () => {
                 onClick={() => navigate('/services')}
                 className="text-white hover:text-aura-200 px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-full border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/5 backdrop-blur-sm group w-full sm:w-auto max-w-xs sm:max-w-none"
               >
-                {t('common.learnMore')}
+                En savoir plus
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
@@ -389,15 +387,15 @@ const Index = () => {
             >
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-light text-white mb-1">500+</div>
-                <div className="text-xs sm:text-sm text-slate-400 font-light">{t('homepage.finalCta.stats.projects')}</div>
+                <div className="text-xs sm:text-sm text-slate-400 font-light">Projets réalisés</div>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-light text-white mb-1">98%</div>
-                <div className="text-xs sm:text-sm text-slate-400 font-light">{t('homepage.finalCta.stats.satisfaction')}</div>
+                <div className="text-xs sm:text-sm text-slate-400 font-light">Satisfaction client</div>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-light text-white mb-1">24/7</div>
-                <div className="text-xs sm:text-sm text-slate-400 font-light">{t('homepage.finalCta.stats.support')}</div>
+                <div className="text-xs sm:text-sm text-slate-400 font-light">Support disponible</div>
               </div>
             </motion.div>
           </motion.div>

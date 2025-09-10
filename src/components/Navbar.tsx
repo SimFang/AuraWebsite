@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useLocale } from "@/contexts/LocaleContext";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const { t } = useLocale();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -79,7 +77,7 @@ const Navbar = () => {
               navigate('/');
             }}
           >
-            {t("navbar.home")}
+            Accueil
           </a>
           
           {/* Services Dropdown */}
@@ -89,7 +87,7 @@ const Navbar = () => {
               onClick={() => setIsServicesOpen(!isServicesOpen)}
               onMouseEnter={() => setIsServicesOpen(true)}
             >
-              <span>{t("navbar.services")}</span>
+              <span>Services</span>
               <ChevronDown size={16} className={cn(
                 "transition-transform duration-200",
                 isServicesOpen ? "rotate-180" : ""
@@ -132,7 +130,7 @@ const Navbar = () => {
             onClick={() => navigate('/contact')}
             className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
-            {t("navbar.start")}
+            Commencer
           </button>
         </nav>
 
@@ -164,7 +162,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            {t("navbar.home")}
+            Accueil
           </a>
           
           {/* Mobile Services Menu */}
@@ -202,7 +200,7 @@ const Navbar = () => {
             }}
             className="bg-gradient-to-r from-aura-500 to-purple-600 hover:from-aura-600 hover:to-purple-700 text-white py-3 px-6 w-full text-center rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            {t("navbar.start")}
+            Commencer
           </button>
         </nav>
       </div>
