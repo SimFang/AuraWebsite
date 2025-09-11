@@ -33,6 +33,10 @@ const Navbar = () => {
   };
 
   const scrollToTop = () => {
+    // Navigate to landing page if not already there
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -64,7 +68,11 @@ const Navbar = () => {
           }}
           aria-label="Websora"
         >
-          <span className="text-lg font-medium text-aura-900">Websora</span>
+          <img 
+            src="/logo.png" 
+            alt="Websora" 
+            className="h-8 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
